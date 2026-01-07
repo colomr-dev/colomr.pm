@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Content on Preventa Técnica | Google Cloud Platform | GCP</title>
-    <link>http://localhost:39439/content/</link>
-    <description>Recent content in Content on Preventa Técnica | Google Cloud Platform | GCP</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Content on GCP Presales Manager | Google Cloud Expert</title>
+    <link>http://colomr.pm/content/</link>
+    <description>Recent content in Content on GCP Presales Manager | Google Cloud Expert</description>
+    <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="http://localhost:39439/content/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://colomr.pm/content/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

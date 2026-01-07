@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:39439/authors/</loc>
+    <loc>http://colomr.pm/authors/</loc>
   </url><url>
-    <loc>http://localhost:39439/categories/</loc>
+    <loc>http://colomr.pm/categories/</loc>
   </url><url>
-    <loc>http://localhost:39439/collections/</loc>
+    <loc>http://colomr.pm/collections/</loc>
   </url><url>
-    <loc>http://localhost:39439/content/</loc>
+    <loc>http://colomr.pm/content/</loc>
   </url><url>
-    <loc>http://localhost:39439/</loc>
+    <loc>http://colomr.pm/</loc>
   </url><url>
-    <loc>http://localhost:39439/tags/</loc>
+    <loc>http://colomr.pm/tags/</loc>
   </url>
 </urlset>
