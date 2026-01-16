@@ -41,4 +41,4 @@ firebase deploy --only hosting
 
 ## 🔍 Más Información
 
-Para conocer más sobre mi trayectoria profesional y contactar conmigo, ¡visita [colomr.dev](https://colomr.dev)! 🌟
+Para conocer más sobre mi trayectoria profesional y contactar conmigo, ¡visita [colomr.pm](https://colomr.pm)! 🌟
