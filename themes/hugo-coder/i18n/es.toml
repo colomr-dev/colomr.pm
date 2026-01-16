@@ -15,7 +15,7 @@ one = "autor"
 other = "autores"
 
 [posts]
-other = "entradas"
+other = "publicaciones"
 
 [reading_time]
 one = "Un minuto de lectura"
@@ -34,7 +34,7 @@ other = "Puedes regresar a la <a href=\"{{ . }}\">página inicial</a>."
 other = "Licensed under"
 
 [powered_by]
-other = "Powered by"
+other = "Desarrollado por"
 
 [see_also]
 other = "También ver en"
@@ -61,4 +61,4 @@ other = "advertencia"
 other = "error"
 
 [link_to_heading]
-other = "Enlace a cabecera"
+other = "Link to heading"

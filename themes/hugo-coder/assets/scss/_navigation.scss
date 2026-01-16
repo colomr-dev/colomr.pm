@@ -24,12 +24,6 @@
     text-transform: uppercase;
   }
 
-  .navbar-brand img {
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-
   .navigation-list {
     float: right;
     list-style: none;
@@ -106,6 +100,10 @@
     display: none;
 
     @media only screen and (max-width: 768px) {
+      display: initial;
+      position: relative;
+      visibility: hidden;
+
       &:checked+label>i {
         color: $alt-bg-color;
       }
@@ -114,6 +112,10 @@
         visibility: visible;
         opacity: 1;
         max-height: 100rem;
+      }
+
+      &:focus-visible+label {
+        outline-style: auto;
       }
     }
   }
