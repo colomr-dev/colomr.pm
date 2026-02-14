@@ -68,3 +68,7 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 google-cloud-sdk/
+
+# Hugo generated files
+public/
+resources/_gen/
