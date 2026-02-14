@@ -118,8 +118,17 @@ def generate_desc_and_category(badge: dict, categorias: list[dict], existing_bad
 
 Dado el siguiente badge, genera:
 1. "desc": Descripción en español de 1-2 frases sobre qué se aprende en este curso. Estilo profesional y conciso.
-2. "categoria": Una de estas categorías:
+2. "categoria": Una de estas categorías existentes:
 {cat_list}
+
+Si ninguna categoría existente encaja con el badge, puedes crear una nueva. En ese caso, añade también:
+3. "nueva_categoria": Un objeto con los campos:
+   - "id": identificador en minúsculas con guiones (ej: "seguridad-cloud")
+   - "nombre": nombre visible (ej: "Seguridad Cloud")
+   - "icono": icono de Font Awesome 6 (ej: "fa-shield-halved"). Elige uno apropiado para la temática
+   - "color": color hexadecimal que no repita los existentes
+
+Solo incluye "nueva_categoria" si realmente no encaja en ninguna existente.
 
 Ejemplos de badges existentes para referencia de estilo:
 {examples_text}
@@ -127,7 +136,7 @@ Ejemplos de badges existentes para referencia de estilo:
 Badge nuevo:
 - Título: "{badge['titulo']}"
 
-Responde SOLO con un JSON válido (sin markdown): {{"desc": "...", "categoria": "..."}}"""
+Responde SOLO con un JSON válido (sin markdown)."""
 
     response = client.models.generate_content(
         model="gemini-2.0-flash",
@@ -146,6 +155,13 @@ def save_badges(badges: list[dict]) -> None:
     """Save badges to badges.json with consistent formatting."""
     with open(BADGES_JSON, "w", encoding="utf-8") as f:
         json.dump(badges, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
+def save_categorias(categorias: list[dict]) -> None:
+    """Save categorias to categorias.json with consistent formatting."""
+    with open(CATEGORIAS_JSON, "w", encoding="utf-8") as f:
+        json.dump(categorias, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
 
@@ -168,6 +184,7 @@ def main():
         print(f"  - {b['titulo']} ({b['fecha']})")
 
     categorias = load_categorias()
+    categorias_updated = False
 
     # Generate description and category for each new badge
     completed_badges = []
@@ -176,6 +193,16 @@ def main():
         result = generate_desc_and_category(badge, categorias, existing_badges)
         badge["desc"] = result["desc"]
         badge["categoria"] = result["categoria"]
+
+        # Handle new category creation
+        if "nueva_categoria" in result:
+            new_cat = result["nueva_categoria"]
+            cat_ids = {c["id"] for c in categorias}
+            if new_cat["id"] not in cat_ids:
+                categorias.append(new_cat)
+                categorias_updated = True
+                print(f"  -> NEW category created: {new_cat['id']} ({new_cat['nombre']})")
+
         completed_badges.append(badge)
         print(f"  -> category: {badge['categoria']}")
 
@@ -184,6 +211,9 @@ def main():
     updated_badges = completed_badges + existing_badges
 
     save_badges(updated_badges)
+    if categorias_updated:
+        save_categorias(categorias)
+        print("Updated categorias.json with new category(ies).")
     print(f"Updated badges.json with {len(completed_badges)} new badge(s).")
 
     # Write badge names for use in commit message
