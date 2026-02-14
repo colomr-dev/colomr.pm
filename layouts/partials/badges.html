@@ -58,19 +58,24 @@
     </div>
 </section>
 
-{{/* JavaScript para filtros */}}
+{{/* Botón scroll to top */}}
+<button class="scroll-top-btn" aria-label="Ir al inicio de la página">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+{{/* JavaScript para filtros y scroll to top */}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const badgeCards = document.querySelectorAll('.badge-card-full');
-    
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
-            
+
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
+
             badgeCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
@@ -80,6 +85,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.querySelector('.scroll-top-btn');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 600) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
 </script>

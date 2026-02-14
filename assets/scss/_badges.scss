@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0.5rem;
     
     img {
       width: 100%;
@@ -74,16 +74,16 @@
   }
   
   .badge-info {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
-  
+
   .badge-category {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -98,7 +98,7 @@
     font-weight: 600;
     line-height: 1.4;
     color: $alt-fg-color;
-    margin-bottom: 1rem;
+    margin: 0 0 0.3rem 0;
     flex-grow: 1;
   }
   
@@ -271,7 +271,7 @@
   }
   
   .badge-content {
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -285,28 +285,28 @@
     border-radius: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.3rem;
     width: fit-content;
-    
+
     i {
       font-size: 1rem;
     }
   }
-  
+
   .badge-title-full {
     font-size: 1.7rem;
     font-weight: 600;
     line-height: 1.4;
     color: $alt-fg-color;
-    margin-bottom: 1rem;
+    margin: 0 0 0.3rem 0;
   }
-  
+
   .badge-description {
     font-size: 1.4rem;
     line-height: 1.6;
     color: $fg-color;
     opacity: 0.85;
-    margin-bottom: 1.5rem;
+    margin: 0 0 0.8rem 0;
     flex-grow: 1;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -351,6 +351,39 @@
     i {
       font-size: 1.8rem;
     }
+  }
+}
+
+// Scroll to top button
+.scroll-top-btn {
+  position: fixed;
+  bottom: 7rem;
+  left: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: $link-color;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    background-color: darken($link-color, 10%);
   }
 }
 

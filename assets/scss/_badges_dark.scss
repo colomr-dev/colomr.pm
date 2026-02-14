@@ -113,7 +113,15 @@
   
   .btn-profile {
     background-color: $link-color-dark;
-    
+
+    &:hover {
+      background-color: lighten($link-color-dark, 10%);
+    }
+  }
+
+  .scroll-top-btn {
+    background-color: $link-color-dark;
+
     &:hover {
       background-color: lighten($link-color-dark, 10%);
     }
