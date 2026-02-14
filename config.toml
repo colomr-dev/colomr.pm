@@ -33,7 +33,7 @@ style = "github-dark"
   hidecolorschemetoggle = false
 
   # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
+  customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
 [taxonomies]
@@ -73,6 +73,11 @@ style = "github-dark"
   weight = 1
   url = "https://mnf.red/colomr"
   target = "_blank"
+
+[[menu.main]]
+  name = "Certificaciones"
+  weight = 2
+  url = "/badges/"
 
 
 

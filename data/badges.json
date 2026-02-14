@@ -1,0 +1,290 @@
+[
+  {
+    "titulo": "AI Infrastructure: Storage Options",
+    "img": "https://cdn.qwiklabs.com/OAEN3FTB3gtkhi2sQP%2B1IMQrjkYLnb3cEKFFP43liQI%3D",
+    "fecha": "2026-02-13",
+    "desc": "Curso completo sobre opciones de almacenamiento para AI y HPC en Google Cloud. Aprende a elegir el almacenamiento correcto para cada etapa del ciclo de vida de ML, optimizar I/O durante el entrenamiento, gestionar datasets masivos y servir artefactos de modelo con baja latencia.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/22249778",
+    "categoria": "ai-infrastructure"
+  },
+  {
+    "titulo": "AI Infrastructure: Deployment Types",
+    "img": "https://cdn.qwiklabs.com/sAV8AZikimVGv5QxHbaXsMFKmnlx%2Bd09AzKOjYSLRQ0%3D",
+    "fecha": "2026-02-10",
+    "desc": "Guía completa para desplegar, gestionar y optimizar cargas de trabajo de AI y HPC en Google Cloud. Explora estrategias de despliegue desde Compute Engine hasta GKE, creación de clusters y despliegue de inferencia.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/22143744",
+    "categoria": "ai-infrastructure"
+  },
+  {
+    "titulo": "AI Infrastructure: Cloud TPUs",
+    "img": "https://cdn.qwiklabs.com/3NafcD%2Bl6oCEkryzJwGSgdSH3rzEOBfbvV4%2BT6PbMb0%3D",
+    "fecha": "2026-02-03",
+    "desc": "Exploración de TPUs en Google Cloud: ventajas, desventajas, comparación de aceleradores TPU, estrategias para maximizar rendimiento y eficiencia, e interoperabilidad GPU/TPU para flujos de trabajo flexibles.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21955390",
+    "categoria": "ai-infrastructure"
+  },
+  {
+    "titulo": "AI Infrastructure: Cloud GPUs",
+    "img": "https://cdn.qwiklabs.com/d4%2BD8UObSLLWEp1fIe%2FVz0W338mBBDi7krswxCcPHIA%3D",
+    "fecha": "2026-01-29",
+    "desc": "Computadoras AI optimizadas para rendimiento: CPUs, GPUs y TPUs para tareas de IA ultra rápidas. Aprende a seleccionar el compute adecuado para tus proyectos de AI.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21844402",
+    "categoria": "ai-infrastructure"
+  },
+  {
+    "titulo": "AI Infrastructure: Introduction to AI Hypercomputer",
+    "img": "https://cdn.qwiklabs.com/h85Plz%2FOFxJgnN6XcOMB4MbXxjIqRmiSQGVGowku%2F60%3D",
+    "fecha": "2026-01-25",
+    "desc": "Fundamentos de AI Hypercomputers: qué son, cómo ayudan con cargas de trabajo de AI, componentes internos (GPUs, TPUs, CPUs) y cómo elegir la estrategia de despliegue correcta.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21739185",
+    "categoria": "ai-infrastructure"
+  },
+  {
+    "titulo": "Google DeepMind: 03 Design And Train Neural Networks",
+    "img": "https://cdn.qwiklabs.com/wtnJrSvccc36TYyOEFH5Ftu9ZgdGxzaYoeSj%2Bvbo6YI%3D",
+    "fecha": "2026-01-20",
+    "desc": "Proceso de entrenamiento de modelos ML: identificar y mitigar overfitting/underfitting, implementar perceptrón multicapa, comprender backpropagation, y considerar impactos sociales de la innovación.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21623780",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Google DeepMind: 02 Represent Your Language Data",
+    "img": "https://cdn.qwiklabs.com/yT3VHyvBhsKbzHBX%2FHeqIiwFY3PJeGcrnWJrPN0wT9M%3D",
+    "fecha": "2026-01-09",
+    "desc": "Preparación de datos de texto para modelos de lenguaje: tokenización, embeddings, representación de significado, vectores y matrices, y diseño ético de datasets con Data Cards.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21436764",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Google DeepMind: 01 Build Your Own Small Language Model",
+    "img": "https://cdn.qwiklabs.com/3MlbC%2B%2BILzYZ%2FWrUEHOPr0IRxyoS%2FDrH8XJNw7zDWO0%3D",
+    "fecha": "2026-01-04",
+    "desc": "Fundamentos de modelos de lenguaje: pipeline de desarrollo ML, modelos n-gram vs transformers, generación de texto, identificación de patrones en lenguaje, y uso responsable de ML.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21331562",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Discover Business Value for Customers",
+    "img": "https://cdn.qwiklabs.com/236PRWXnqzV2aslIT1UfeXYHwFleZM%2FHMqlE89LG6kk%3D",
+    "fecha": "2025-12-31",
+    "desc": "Proceso de descubrimiento de valor de negocio usando contenido propietario de Google para partners técnicos de ventas. Incluye herramienta externa Yoodli para prácticas.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21282024",
+    "categoria": "presales"
+  },
+  {
+    "titulo": "Partner Pre-Sales Readiness Training",
+    "img": "https://cdn.qwiklabs.com/DhJUWZNuDqrcC5Df2PDit8RvgQNrtfA4oOUeRpcXGgA%3D",
+    "fecha": "2025-12-26",
+    "desc": "Formación integral para partners de Google Cloud: conocimiento de productos, fortalecimiento de habilidades para ganar con clientes y escalar el negocio en Google Cloud.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21146122",
+    "categoria": "presales"
+  },
+  {
+    "titulo": "Modernizing Mainframe Applications with Google Cloud",
+    "img": "https://cdn.qwiklabs.com/HBb%2FPS5qQN2bdZDFZBgenhXDsV348WhAWKRvO8XAqPQ%3D",
+    "fecha": "2025-12-22",
+    "desc": "Principios de migraciones automatizadas, planificación de migraciones de sistemas legacy a Google Cloud usando plataforma G4, y ejecución de conversión de código de prueba.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21060333",
+    "categoria": "cloud-fundamentals"
+  },
+  {
+    "titulo": "Create and Manage AlloyDB Instances",
+    "img": "https://cdn.qwiklabs.com/y6SjhUzW4Z7BGGTaSfftkQ%2FyJrpobLTdHYStFcRowlY%3D",
+    "fecha": "2025-12-19",
+    "desc": "Operaciones core de AlloyDB, migración desde PostgreSQL, administración de bases de datos AlloyDB, y aceleración de consultas analíticas usando AlloyDB Columnar Engine.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/21012001",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Create and Manage Bigtable Instances",
+    "img": "https://cdn.qwiklabs.com/b4%2FojapG9x64jWv2UlSHW8R4r4v9iAG%2BKnOxeCoJZhE%3D",
+    "fecha": "2025-12-17",
+    "desc": "Creación de instancias, diseño de esquemas, consulta de datos, y tareas administrativas en Bigtable incluyendo monitoreo de rendimiento y autoscaling de nodos.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20959005",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Create and Manage Cloud Spanner Instances",
+    "img": "https://cdn.qwiklabs.com/2oTBjUYL6iZpA67tQpvfhopdcQpBfEVR2C8A%2BQQbdO0%3D",
+    "fecha": "2025-12-15",
+    "desc": "Creación e interacción con instancias y bases de datos Cloud Spanner, carga de datos, backups, definición de esquemas, planes de consulta y despliegue de aplicaciones web.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20908923",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Create and Manage Cloud SQL for PostgreSQL Instances",
+    "img": "https://cdn.qwiklabs.com/sHfAMHO2IWXeCqtL4B4RNSAp1pOtBhJ2MV88aIArZTI%3D",
+    "fecha": "2025-12-11",
+    "desc": "Migración, configuración y gestión de instancias y bases de datos Cloud SQL para PostgreSQL.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20811738",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Introduction to Vertex AI Studio",
+    "img": "https://cdn.qwiklabs.com/Sx1H%2BLHjcQxuDa6wW8nGLKM8LaPZLD%2BJFHPnNIgypo4%3D",
+    "fecha": "2025-12-05",
+    "desc": "Interacción con modelos generativos de AI, prototipado de ideas de negocio y lanzamiento a producción usando Vertex AI Studio para aplicaciones Gemini multimodales.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20682449",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Introduction to Generative AI",
+    "img": "https://cdn.qwiklabs.com/dkQVGBYS8HvCJHFPxPExnP3JVKTEoe6CpEKnTq8o2fo%3D",
+    "fecha": "2025-12-04",
+    "desc": "Qué es Generative AI, cómo se usa, diferencias con métodos tradicionales de ML, y herramientas de Google para desarrollar apps Gen AI.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20659298",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Introduction to Reliable Deep Learning",
+    "img": "https://cdn.qwiklabs.com/S92b1o4jb4mcqpMX%2BDntx4lYWXQ6Zq%2BI4ZQncEm80TQ%3D",
+    "fecha": "2025-11-30",
+    "desc": "Deep learning confiable: modelos que hacen predicciones precisas y comprenden su incertidumbre. Creación de sistemas AI confiables y robustos para escenarios de alto riesgo.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20576426",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Migrate MySQL Data to Cloud SQL Using Database Migration Service",
+    "img": "https://cdn.qwiklabs.com/FvnU2vgc7bnYOt1tEzC499aDckyK2py1RuQ28kKqS0U%3D",
+    "fecha": "2025-11-27",
+    "desc": "Migración de datos MySQL a Cloud SQL usando diferentes tipos de jobs y opciones de conectividad en Database Migration Service, incluyendo migración de usuarios.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20523762",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Enterprise Database Migration",
+    "img": "https://cdn.qwiklabs.com/XwBUVJWvsZCmPFl2hy6dD8SLjFBwaK4dpRC98%2Bpxll8%3D",
+    "fecha": "2025-11-25",
+    "desc": "Arquitectura, planificación, ejecución y prueba de migraciones de bases de datos empresariales. Migración de SQL Server y Oracle a Google Cloud.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/20477281",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Select a Google Cloud Database for Your Applications",
+    "img": "https://cdn.qwiklabs.com/su4ac%2FBlgHBYKtjaCohZ4MrBjwhdmrS8nhKs8D4rH50%3D",
+    "fecha": "2025-09-24",
+    "desc": "Análisis y selección de bases de datos para tus necesidades. Exploración de bases relacionales y NoSQL, Cloud SQL, AlloyDB y Spanner con experiencia práctica en Vector Search.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/18581554",
+    "categoria": "bases-datos"
+  },
+  {
+    "titulo": "Google Cloud Fundamentals: Core Infrastructure",
+    "img": "https://cdn.qwiklabs.com/QnJomp9dd5OkLIm9wbwRBWlerrWPnHOBW1UGlSY4yNU%3D",
+    "fecha": "2025-07-26",
+    "desc": "Conceptos y terminología importantes para trabajar con Google Cloud. Comparación de servicios de computación y almacenamiento, y herramientas de gestión de recursos.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/17143362",
+    "categoria": "cloud-fundamentals"
+  },
+  {
+    "titulo": "Machine Learning in the Enterprise",
+    "img": "https://cdn.qwiklabs.com/fF9NsDR9h%2BFTXIotef3eQgSxMwVSFuAwjysDQf8RjOE%3D",
+    "fecha": "2024-09-29",
+    "desc": "Enfoque del workflow ML en el mundo real mediante caso de estudio. Gestión de datos, preprocessing, y comparación de AutoML, BigQuery ML y entrenamiento personalizado.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/11771840",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "How Google Does Machine Learning",
+    "img": "https://cdn.qwiklabs.com/Nh7inln%2Fe1R%2B8xQ6XCdsUYMF9He6L7zZl5fBLSk8DiY%3D",
+    "fecha": "2024-05-29",
+    "desc": "Qué es ML y qué problemas puede resolver. Mejores prácticas, introducción a Vertex AI, cinco fases de implementación y reconocimiento de sesgos.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/9241051",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "Engineer Data for Predictive Modeling with BigQuery ML",
+    "img": "https://cdn.qwiklabs.com/CjuAJnQZzScYxqFIHfq6w9Y6IVPyKl8eOMGrFZCwzNw%3D",
+    "fecha": "2023-11-15",
+    "desc": "Construcción de pipelines de transformación de datos a BigQuery usando Dataprep, ETL workflows con Cloud Storage, Dataflow y BigQuery, y construcción de modelos ML con BigQuery ML.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/6074274",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Build a Data Warehouse with BigQuery",
+    "img": "https://cdn.qwiklabs.com/NR9WSxhz3cevI1hljyYhRzTqfnUxrqYXEpJYAgNUnJE%3D",
+    "fecha": "2023-11-14",
+    "desc": "Joins de datos, solución de problemas de joins, append con unions, tablas particionadas por fecha, y trabajo con JSON, arrays y structs en BigQuery.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/6058812",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Prepare Data for ML APIs on Google Cloud",
+    "img": "https://cdn.qwiklabs.com/epA3EglyiDMh%2FqUuu0h2RU6ehFnZlmxSn6bitOZdW9I%3D",
+    "fecha": "2023-11-13",
+    "desc": "Limpieza de datos con Dataprep, ejecución de pipelines en Dataflow, creación de clusters y jobs Apache Spark en Dataproc, y llamadas a ML APIs.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/6041607",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Serverless Data Processing with Dataflow: Operations",
+    "img": "https://cdn.qwiklabs.com/7S8VZ4%2F988FJB%2FOUsutpQQ20jE%2B6P3BuYWnIfIsJxMs%3D",
+    "fecha": "2023-11-09",
+    "desc": "Componentes del modelo operativo de Dataflow, herramientas para troubleshooting, optimización de rendimiento, testing, deployment y Templates.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/6006474",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Serverless Data Processing with Dataflow: Develop Pipelines",
+    "img": "https://cdn.qwiklabs.com/EkkqneUruOyPaNHmHCp51jUqU4TF7De1AJ3yvN3F77I%3D",
+    "fecha": "2023-11-04",
+    "desc": "Desarrollo de pipelines con Beam SDK: conceptos Apache Beam, procesamiento de streaming con windows, watermarks y triggers, sources/sinks, schemas, y State/Timer APIs.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5960279",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Serverless Data Processing with Dataflow: Foundations",
+    "img": "https://cdn.qwiklabs.com/kqtkS1eqxywaKx%2BgraSpukhRTjvqMWYJuHYwmkYPb6Y%3D",
+    "fecha": "2023-10-26",
+    "desc": "Apache Beam y Dataflow: visión de Beam, beneficios del framework Beam Portability, separación de compute y storage, y modelos de seguridad.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5799081",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Smart Analytics, Machine Learning, and AI on Google Cloud",
+    "img": "https://cdn.qwiklabs.com/0%2BCXjGoP1%2FaRnWYj6q58urZaVxrFk%2FV0U755qipTLdI%3D",
+    "fecha": "2023-10-23",
+    "desc": "Incorporación de ML en pipelines de datos: AutoML para poca personalización, Notebooks y BigQuery ML para capacidades a medida, y Vertex AI para producción.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5741139",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Build Batch Data Pipelines on Google Cloud",
+    "img": "https://cdn.qwiklabs.com/Qx3AMAe8Cel5nh30WMhnrXhEpg%2FS2O7BcPzEDIy5tqI%3D",
+    "fecha": "2023-10-22",
+    "desc": "Diseño, construcción y optimización de pipelines de datos batch: transformaciones a gran escala, orquestación de workflows, Dataflow, Dataproc Serverless.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5724649",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Build Streaming Data Pipelines on Google Cloud",
+    "img": "https://cdn.qwiklabs.com/rxapmBG5qnocuxCurwVwmhrojQcOgQUpGVvaksvXn9A%3D",
+    "fecha": "2023-10-20",
+    "desc": "Gestión de datos continuos y no acotados con productos de Google Cloud: desafíos del mundo real en streaming.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5690393",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Build Data Lakes and Data Warehouses on Google Cloud",
+    "img": "https://cdn.qwiklabs.com/cTBU2A%2Bj4XUw8u08rI06ANdeXYik5MlQcZZuk2wP46c%3D",
+    "fecha": "2023-10-14",
+    "desc": "Concepto de data lakehouse: fuentes de datos open-standard que combinan lo mejor de data lakes y warehouses, abordando limitaciones de enfoques tradicionales.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5608986",
+    "categoria": "data-engineering"
+  },
+  {
+    "titulo": "Google Cloud Big Data and Machine Learning Fundamentals",
+    "img": "https://cdn.qwiklabs.com/RuPHANaUUgrbjfgGn6ZMXObBK1JavCTzMDh5dr6YhZk%3D",
+    "fecha": "2023-10-12",
+    "desc": "Productos de big data y ML de Google Cloud que soportan el ciclo de vida data-to-AI: procesos, desafíos y beneficios de construir pipelines y modelos con Vertex AI.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5582196",
+    "categoria": "cloud-fundamentals"
+  },
+  {
+    "titulo": "Preparing for your Professional Data Engineer Journey",
+    "img": "https://cdn.qwiklabs.com/an23vnpuEOEfCNPmwoN9ncqRPR9CLVcMiJJFKU7WnF8%3D",
+    "fecha": "2023-10-04",
+    "desc": "Creación de plan de estudio para certificación PDE: exploración de dominios del examen, evaluación de preparación y plan individual de estudio.",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/5480380",
+    "categoria": "cloud-fundamentals"
+  }
+]

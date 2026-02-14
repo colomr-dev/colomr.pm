@@ -1,0 +1,86 @@
+{{/* Partial para mostrar todos los badges con filtros por categoría */}}
+{{ $badges := .Site.Data.badges }}
+{{ $categorias := .Site.Data.categorias }}
+{{ $sortedBadges := sort $badges "fecha" "desc" }}
+
+<section class="badges-section">
+    <div class="container">
+        <header class="badges-header">
+            <h1 class="badges-page-title">Certificaciones Google Cloud</h1>
+            <p class="badges-page-subtitle">
+                <i class="fa-solid fa-award"></i> 
+                {{ len $badges }} skill badges completados • 
+                Formación continua desde 2023
+            </p>
+        </header>
+
+        {{/* Filtros por categoría */}}
+        <div class="badges-filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fa-solid fa-th"></i> Todas
+            </button>
+            {{ range $categorias }}
+            <button class="filter-btn" data-filter="{{ .id }}" style="--cat-color: {{ .color }}">
+                <i class="fa-solid {{ .icono }}"></i> {{ .nombre }}
+            </button>
+            {{ end }}
+        </div>
+
+        {{/* Grid de badges */}}
+        <div class="badges-grid">
+            {{ range $sortedBadges }}
+            {{ $cat := index (where $categorias "id" .categoria) 0 }}
+            <article class="badge-card-full" data-category="{{ .categoria }}">
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="badge-link">
+                    <div class="badge-image-wrapper">
+                        <img src="{{ .img }}" alt="{{ .titulo }}" loading="lazy">
+                    </div>
+                    <div class="badge-content">
+                        <span class="badge-category-tag" style="background-color: {{ $cat.color }}20; color: {{ $cat.color }}">
+                            <i class="fa-solid {{ $cat.icono }}"></i> {{ $cat.nombre }}
+                        </span>
+                        <h3 class="badge-title-full">{{ .titulo }}</h3>
+                        <p class="badge-description">{{ .desc }}</p>
+                        <time class="badge-date-full" datetime="{{ .fecha }}">
+                            <i class="fa-regular fa-calendar-check"></i> Completado el {{ .fecha }}
+                        </time>
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+
+        {{/* Link al perfil público */}}
+        <div class="badges-profile-link">
+            <a href="https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45" target="_blank" rel="noopener" class="btn-profile">
+                <i class="fa-brands fa-google"></i> Ver perfil completo en Google Skills
+            </a>
+        </div>
+    </div>
+</section>
+
+{{/* JavaScript para filtros */}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const badgeCards = document.querySelectorAll('.badge-card-full');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            badgeCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.3s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
