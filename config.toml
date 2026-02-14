@@ -1,4 +1,4 @@
-baseurl = "http://colomr.pm/"
+baseurl = "https://colomr.pm/"
 title = "GCP Presales Manager | Google Cloud Expert"
 theme = "hugo-coder"
 languagecode = "es"
@@ -75,7 +75,7 @@ style = "github-dark"
   target = "_blank"
 
 [[menu.main]]
-  name = "Certificaciones"
+  name = "Insignias"
   weight = 2
   url = "/badges/"
 
