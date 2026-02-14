@@ -15,6 +15,20 @@ $alt-fg-color-dark: #dadada !default;
 $lighter-alt-bg-color-dark: #4f4f4f !default;
 $link-color-dark: #42a5f5 !default;
 
+// Sticky header
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $bg-color;
+  height: auto;
+  padding: 0.4rem 0;
+}
+
+body.colorscheme-dark .navigation {
+  background-color: $bg-color-dark;
+}
+
 // Center content vertically on home page
 .wrapper {
   .content {
