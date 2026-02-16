@@ -75,9 +75,15 @@ style = "github-dark"
   target = "_blank"
 
 [[menu.main]]
-  name = "Insignias"
+  name = "Formación"
   weight = 2
   url = "/badges/"
+
+[[menu.main]]
+  name = "Trayectoria"
+  weight = 3
+  url = "https://www.linkedin.com/in/colomr-cv/"
+  target = "_blank"
 
 
 
