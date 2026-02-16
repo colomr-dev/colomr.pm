@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "AI Infrastructure: Networking Techniques",
+    "img": "https://cdn.qwiklabs.com/yVvTL%2FdSmsIrykfv6aYYWaUUmviuW9TYqnZ1gJYmPlg%3D",
+    "fecha": "2026-02-16",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/22313161",
+    "desc": "Explora las técnicas de networking para optimizar las cargas de trabajo de IA e HPC en Google Cloud. Aprende a configurar y gestionar redes de alto rendimiento para el entrenamiento de modelos y la inferencia.",
+    "categoria": "ai-infrastructure"
+  },
+  {
     "titulo": "AI Infrastructure: Storage Options",
     "img": "https://cdn.qwiklabs.com/OAEN3FTB3gtkhi2sQP%2B1IMQrjkYLnb3cEKFFP43liQI%3D",
     "fecha": "2026-02-13",
