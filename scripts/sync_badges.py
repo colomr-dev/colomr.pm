@@ -138,10 +138,22 @@ Badge nuevo:
 
 Responde SOLO con un JSON válido (sin markdown)."""
 
-    response = client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=prompt,
-    )
+    models_to_try = ["gemini-2.0-flash", "gemini-1.5-flash"]
+    response = None
+    for model in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=model,
+                contents=prompt,
+            )
+            break
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                print(f"  -> Quota exceeded for {model}, trying next model...")
+                continue
+            raise
+    if response is None:
+        raise RuntimeError("All Gemini models exhausted their quota.")
 
     response_text = response.text.strip()
     # Clean potential markdown wrapping
