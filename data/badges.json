@@ -1,5 +1,21 @@
 [
   {
+    "titulo": "AI Boost Bites: Create Your Own Productivity Tools",
+    "img": "https://cdn.qwiklabs.com/oAk8KVgG3dPCgOZfTCQ2VF7QaZ%2FHpVNaQjfftp%2BX%2By4%3D",
+    "fecha": "2026-03-22",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/23169547",
+    "desc": "Desarrolla herramientas de productividad personalizadas utilizando IA y Gemini en Google Cloud. Aprende a diseñar, implementar y optimizar soluciones para potenciar tu flujo de trabajo.",
+    "categoria": "ai-ml"
+  },
+  {
+    "titulo": "AI Boost Bites: Guided Learning with Gemini",
+    "img": "https://cdn.qwiklabs.com/WzJVR4Ra3vwRUl%2FgSsEfAg8wKePaHTD5IUu%2BT%2BGfRBg%3D",
+    "fecha": "2026-03-22",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/23169138",
+    "desc": "Profundiza en el uso de Gemini para el aprendizaje guiado en Google Cloud. Explora cómo esta tecnología puede asistir en la adquisición de conocimientos y la resolución de problemas técnicos.",
+    "categoria": "ai-ml"
+  },
+  {
     "titulo": "AI Boost Bites: Create Your Own Retro Arcade Game",
     "img": "https://cdn.qwiklabs.com/77xMsnOKfqYkDQRaajEihlf7nmmugzv5ORrNtUWx68I%3D",
     "fecha": "2026-03-21",
