@@ -1,19 +1,14 @@
-<footer class="footer">
-  <section class="container">
-    ©
-    {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }}
-      {{ .Site.Params.since }} -
-    {{ end }}
-    {{ now.Year }}
-    {{ with .Site.Params.author }} {{ . }} {{ end }}
-    ·
-    {{ if (and .Site.Params.license) }}
-      {{ i18n "licensed_under" }} {{ .Site.Params.license | safeHTML }}
-    ·
-    {{ end }}
-    Desarrollado con 💚 usando <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a> y <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>.
-    {{ if (and .Site.Params.commit .GitInfo) }}
-      [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>]
-    {{ end }}
-  </section>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-social">
+      {{ range .Site.Params.social }}
+      <a href="{{ .url }}" class="footer-social__link" aria-label="{{ .name }}"{{ with .target }} target="{{ . }}" rel="noopener noreferrer"{{ end }}>
+        <i class="{{ .icon }}"></i>
+      </a>
+      {{ end }}
+    </div>
+    <p class="footer-credit">
+      © {{ .Site.Params.since }} - {{ now.Year }} {{ .Site.Params.author }} · Desarrollado con 💚 usando <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a> y <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>.
+    </p>
+  </div>
 </footer>

@@ -1,9 +1,8 @@
 <header class="site-header">
   <nav class="site-nav">
     <div class="nav-brand">
-      <a href="{{ "/" | relURL }}" class="nav-logo-link">
-        <img src="/images/logo.png" alt="{{ .Site.Params.author }}" class="nav-logo" />
-      </a>
+      <span class="material-symbols-outlined nav-icon">home</span>
+      <a href="{{ "/" | relURL }}" class="nav-name">{{ .Site.Params.author }}</a>
     </div>
     <div class="nav-links">
       <a href="{{ "/quien/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/quien/" }} nav-link--active{{ end }}">Quién</a>
@@ -17,29 +16,9 @@
       <div class="nav-avatar">
         <img src="{{ .Site.Params.avatarurl | default "/images/avatar.png" }}" alt="{{ .Site.Params.author }}" />
       </div>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
     </div>
   </nav>
 </header>
-
-<!-- Drawer móvil -->
-<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
-  <a href="{{ "/" | relURL }}" class="nav-drawer__link{{ if .IsHome }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">home</span> Home
-  </a>
-  <a href="{{ "/quien/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/quien/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">person</span> Quién
-  </a>
-  <a href="{{ "/que/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/que/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">school</span> Qué
-  </a>
-  <a href="{{ "/donde/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/donde/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">location_on</span> Dónde
-  </a>
-</div>
-<div class="nav-overlay" id="nav-overlay"></div>
 
 <!-- Bottom nav (solo móvil) -->
 <nav class="bottom-nav" aria-label="Navegación principal">

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-name">{{ .Site.Params.author }}</div>
+    <div class="footer-social">
+      {{ range .Site.Params.social }}
+      <a href="{{ .url }}" class="footer-social__link" aria-label="{{ .name }}"{{ with .target }} target="{{ . }}" rel="noopener noreferrer"{{ end }}>
+        <i class="{{ .icon }}"></i>
+      </a>
+      {{ end }}
+    </div>
+    <p class="footer-credit">Desarrollado con Hugo &amp; Claude</p>
+  </div>
+</footer>
