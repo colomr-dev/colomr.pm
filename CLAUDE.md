@@ -5,7 +5,7 @@ Sitio web personal generado con **Hugo** y desplegado en **Firebase Hosting**.
 Muestra badges/certificaciones de Google Cloud Skills Boost, con descripción y categoría generadas por Gemini AI.
 
 ## Estructura clave
-- `config.toml` — configuración Hugo
+- `hugo.toml` — configuración Hugo (convención moderna, antes `config.toml`)
 - `data/badges.json` — lista de badges (fuente de datos principal)
 - `data/categorias.json` — categorías de badges con icono y color
 - `scripts/sync_badges.py` — script de sincronización automática
@@ -13,7 +13,7 @@ Muestra badges/certificaciones de Google Cloud Skills Boost, con descripción y 
 - `.github/workflows/sync-badges.yml` — workflow de GitHub Actions
 - `layouts/` — plantillas Hugo personalizadas
 - `assets/scss/` — estilos SCSS (requiere Hugo Extended)
-- `themes/hugo-coder/` — tema base
+- `themes/colomr-v1/` — tema propio (Material Design 3)
 
 ## Workflow de sincronización automática (Sync Badges)
 El workflow se ejecuta cada 2 días (cron `0 8 */2 * *`) o manualmente:

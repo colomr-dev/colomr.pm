@@ -15,7 +15,7 @@ Tema Hugo para [colomr.pm](https://colomr.pm). Material Design 3, modo claro/osc
 
 | Pregunta | Respuesta | Fichero(s) |
 |----------|-----------|------------|
-| Datos globales del sitio (título, autor, analytics, social links) | `config.toml` → `[params]` | `config.toml` |
+| Datos globales del sitio (título, autor, analytics, social links) | `hugo.toml` → `[params]` | `hugo.toml` |
 | Datos de una página concreta (título, bloques, cover) | Front matter del `index.md` | `content/*/index.md` |
 | Texto narrativo libre | Body del markdown (debajo del front matter) | `content/*/index.md` |
 | Datos estructurados reutilizables (badges, categorías) | Data files | `data/*.json` |
@@ -30,7 +30,7 @@ Tema Hugo para [colomr.pm](https://colomr.pm). Material Design 3, modo claro/osc
 
 ```
 colomr.pm/
-├── config.toml                    # Solo configuración global del sitio
+├── hugo.toml                      # Solo configuración global del sitio
 ├── content/
 │   ├── _index.md                  # Home — datos del hero, learning, context
 │   ├── quien/
@@ -88,7 +88,7 @@ colomr.pm/
 ## Convención Hugo que seguimos
 
 ```
-config.toml      →  configuración global, [params], [menus], taxonomías
+hugo.toml        →  configuración global, [params], [menus], taxonomías
 front matter     →  datos de cada página (bloques, cover, icon, subtitle...)
 body markdown    →  contenido narrativo (renderizado con {{ .Content }})
 data/*.json      →  datos estructurados reutilizables
@@ -102,7 +102,7 @@ static/          →  solo assets globales (logos, favicons)
 
 ## Páginas interiores — sistema de bloques
 
-Las páginas interiores usan `layout: "page"` y definen su contenido en el **front matter YAML** del `index.md`, no en `config.toml`.
+Las páginas interiores usan `layout: "page"` y definen su contenido en el **front matter YAML** del `index.md`, no en `hugo.toml`.
 
 ### Crear una página nueva
 
