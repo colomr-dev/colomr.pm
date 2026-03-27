@@ -33,6 +33,30 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// --- Tabs (formación) ---
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.ftabs__tab');
+  if (!tabs.length) return;
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      const id = tab.dataset.tab;
+
+      tabs.forEach(function (t) {
+        t.classList.remove('ftabs__tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.ftabs__panel').forEach(function (p) {
+        p.classList.remove('ftabs__panel--active');
+      });
+
+      tab.classList.add('ftabs__tab--active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById('tab-' + id).classList.add('ftabs__panel--active');
+    });
+  });
+});
+
 // --- Dark / Light mode toggle ---
 (function () {
   const STORAGE_KEY = 'colomr-theme';

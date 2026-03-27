@@ -6,9 +6,9 @@
       </a>
     </div>
     <div class="nav-links">
-      <a href="{{ "/quien/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/quien/" }} nav-link--active{{ end }}">Quién</a>
-      <a href="{{ "/que/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/que/" }} nav-link--active{{ end }}">Qué</a>
-      <a href="{{ "/donde/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/donde/" }} nav-link--active{{ end }}">Dónde</a>
+      <a href="{{ "/sobre-mi/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/sobre-mi/" }} nav-link--active{{ end }}">Quién</a>
+      <a href="{{ "/formacion/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/formacion/" }} nav-link--active{{ end }}">Qué</a>
+      <a href="{{ "/vision/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/vision/" }} nav-link--active{{ end }}">Dónde</a>
     </div>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color" onclick="window.__toggleTheme()">
@@ -29,13 +29,13 @@
   <a href="{{ "/" | relURL }}" class="nav-drawer__link{{ if .IsHome }} nav-drawer__link--active{{ end }}">
     <span class="material-symbols-outlined">home</span> Home
   </a>
-  <a href="{{ "/quien/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/quien/" }} nav-drawer__link--active{{ end }}">
+  <a href="{{ "/sobre-mi/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/sobre-mi/" }} nav-drawer__link--active{{ end }}">
     <span class="material-symbols-outlined">person</span> Quién
   </a>
-  <a href="{{ "/que/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/que/" }} nav-drawer__link--active{{ end }}">
+  <a href="{{ "/formacion/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/formacion/" }} nav-drawer__link--active{{ end }}">
     <span class="material-symbols-outlined">school</span> Qué
   </a>
-  <a href="{{ "/donde/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/donde/" }} nav-drawer__link--active{{ end }}">
+  <a href="{{ "/vision/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/vision/" }} nav-drawer__link--active{{ end }}">
     <span class="material-symbols-outlined">location_on</span> Dónde
   </a>
 </div>
@@ -47,15 +47,15 @@
     <span class="material-symbols-outlined">home</span>
     <span>Home</span>
   </a>
-  <a href="{{ "/que/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/que/" }} bottom-nav__item--active{{ end }}">
+  <a href="{{ "/formacion/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/formacion/" }} bottom-nav__item--active{{ end }}">
     <span class="material-symbols-outlined">school</span>
     <span>Qué</span>
   </a>
-  <a href="{{ "/quien/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/quien/" }} bottom-nav__item--active{{ end }}">
+  <a href="{{ "/sobre-mi/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/sobre-mi/" }} bottom-nav__item--active{{ end }}">
     <span class="material-symbols-outlined">person</span>
     <span>Quién</span>
   </a>
-  <a href="{{ "/donde/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/donde/" }} bottom-nav__item--active{{ end }}">
+  <a href="{{ "/vision/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/vision/" }} bottom-nav__item--active{{ end }}">
     <span class="material-symbols-outlined">location_on</span>
     <span>Dónde</span>
   </a>

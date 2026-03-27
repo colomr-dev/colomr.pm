@@ -13,10 +13,10 @@ hero:
   subtitleEmoji: "🤖"
   ctas:
     - label: "Más sobre mí"
-      url: "/quien/"
+      url: "/sobre-mi/"
       style: "primary"
     - label: "Contacto"
-      url: "/donde/"
+      url: "/vision/"
       style: "ghost"
 
 # Learning section
@@ -26,12 +26,12 @@ learning:
   cards:
     - name: "Google"
       desc: "Lo que estudio e implemento en grandes empresas."
-      url: "/que/"
+      url: "/formacion/"
       icon: "gemini"
       cssModifier: ""
     - name: "Anthropic"
       desc: "Lo que estudio y construyo cuando nadie me lo pide."
-      url: "/que/"
+      url: "/formacion/"
       icon: "claude"
       cssModifier: "learning-card--anthropic"
 

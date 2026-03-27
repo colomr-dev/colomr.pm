@@ -2,7 +2,7 @@
 
 {{ if .Params.blocks }}
 <!-- Cover + Perfil -->
-<section class="ipage-hero">
+<section class="ipage-hero"{{ with .Params.cover_position }} style="--cover-pos: {{ . }}"{{ end }}>
   <div class="ipage-hero__cover" {{ with .Params.cover }}style="background-image: url('{{ . }}')"{{ end }}></div>
   <div class="ipage-hero__profile">
     <div class="ipage-hero__icon">{{ .Params.icon }}</div>
