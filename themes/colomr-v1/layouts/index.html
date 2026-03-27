@@ -61,7 +61,7 @@
     {{ with $context }}
     <div class="context__main">
       <h3 class="context__heading">{{ .heading }}</h3>
-      <p class="context__body">{{ .body }}</p>
+      <p class="context__body">{{ .body | safeHTML }}</p>
     </div>
     <div class="context__highlight">
       <span class="material-symbols-outlined context__icon">{{ .icon }}</span>

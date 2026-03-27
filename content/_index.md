@@ -27,18 +27,18 @@ learning:
     - name: "Google"
       desc: "Lo que estudio e implemento en grandes empresas."
       url: "/que/"
-      icon: "google-cloud"
+      icon: "gemini"
       cssModifier: ""
     - name: "Anthropic"
       desc: "Lo que estudio y construyo cuando nadie me lo pide."
       url: "/que/"
-      icon: "anthropic"
+      icon: "claude"
       cssModifier: "learning-card--anthropic"
 
 # Context section
 context:
   heading: "Cuando piensas bien... la ejecución \"vibe\""
-  body: "Después de tantos años ayudando a clientes, aprendí que no se trata de usar la última herramienta molona o contratar la consultora más cara. Las \"cosas\" chulas nacen de las personas adecuadas con el pensamiento correcto."
+  body: "Después de tantos años ayudando a clientes, aprendí que no se trata de usar la última herramienta molona o contratar la consultora más cara. Las \"cosas\" chulas nacen de las <span class=\"context__emphasis\">personas adecuadas</span> con el <span class=\"context__emphasis\">pensamiento correcto</span>."
   icon: "architecture"
   stat: "20+"
   statLabel: "AÑOS DE FRACASOS Y ALEGRÍAS"
