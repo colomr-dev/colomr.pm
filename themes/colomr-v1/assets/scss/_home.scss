@@ -323,10 +323,7 @@
 .context__emphasis {
   font-size: 1.2em;
   font-weight: 700;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-on-surface);
 }
 
 .context__highlight {

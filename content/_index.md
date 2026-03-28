@@ -22,9 +22,6 @@ hero:
     - label: "Más sobre mí"
       url: "/sobre-mi/"
       style: "primary"
-    - label: "Contacto"
-      url: "/vision/"
-      style: "ghost"
 
 # Learning section
 learning:

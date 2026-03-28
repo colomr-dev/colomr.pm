@@ -62,6 +62,7 @@
   {{ else if eq .type "contact" }}
   <section class="iblock iblock--contact">
     {{ with .heading }}<h2 class="iblock__heading">{{ . }}</h2>{{ end }}
+    {{ with .body }}<div class="iblock__body">{{ . }}</div>{{ end }}
     <div class="iblock-contact__links">
       {{ range .items }}
       <a href="{{ .url }}" class="iblock-contact__link" target="_blank" rel="noopener noreferrer">
