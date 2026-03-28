@@ -5,9 +5,15 @@
       <a href="{{ "/" | relURL }}" class="nav-name">{{ .Site.Params.author }}</a>
     </div>
     <div class="nav-links">
-      <a href="{{ "/quien/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/quien/" }} nav-link--active{{ end }}">Quién</a>
-      <a href="{{ "/que/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/que/" }} nav-link--active{{ end }}">Qué</a>
-      <a href="{{ "/donde/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/donde/" }} nav-link--active{{ end }}">Dónde</a>
+      {{ range .Site.Params.nav_links }}
+      {{ $page := site.GetPage .url }}
+      {{ $href := cond (ne $page nil) $page.RelPermalink (.url | relURL) }}
+      {{ $active := and (ne $page nil) (eq $.RelPermalink $page.RelPermalink) }}
+      <a href="{{ $href }}" class="nav-link{{ if $active }} nav-link--active{{ end }}">
+        {{ with .nav_icon }}<span class="material-symbols-outlined nav-link__icon">{{ . }}</span>{{ end }}
+        {{ .label }}
+      </a>
+      {{ end }}
     </div>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color" onclick="window.__toggleTheme()">

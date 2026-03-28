@@ -10,11 +10,29 @@
 }
 
 .ipage-hero__cover {
-  height: clamp(11rem, 22vw, 22rem);
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--cover-ratio, 3 / 1);
+  max-height: 24rem;
   background-color: var(--color-surface-container);
   background-size: cover;
-  background-position: var(--cover-pos, top center);
-  filter: brightness(0.6);
+  background-position: var(--cover-pos, center center);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, var(--cover-overlay-opacity, 0.5));
+  }
+}
+
+[data-theme="light"] .ipage-hero__cover::after {
+  background: rgba(255, 255, 255, var(--cover-overlay-opacity, 0.5));
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .ipage-hero__cover::after {
+    background: rgba(255, 255, 255, var(--cover-overlay-opacity, 0.5));
+  }
 }
 
 .ipage-hero__profile {

@@ -84,6 +84,16 @@ style = "github-dark"
   url = "https://www.linkedin.com/in/colomr-cv/"
   target = "_blank"
 
-
-
-
+# Nav links (icon = Material Symbols name, dejar vacío para sin icono)
+[[params.nav_links]]
+  label = "Quién"
+  url = "/sobre-mi/"
+  nav_icon = "person"
+[[params.nav_links]]
+  label = "Qué"
+  url = "/formacion/"
+  nav_icon = "experiment"
+[[params.nav_links]]
+  label = "Dónde"
+  url = "/vision/"
+  nav_icon = "tactic"

@@ -5,7 +5,13 @@ url: "/sobre-mi/"
 layout: "page"
 
 # Page hero data
-cover: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1400&q=80"
+# cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
+# cover_position: "center center"  # top center | right center | bottom center
+# cover_opacity: "0.5"          # 0 = sin oscurecer, 1 = negro total (defecto 0.5)
+cover: "https://w3.pngaura.com/assets/images/posts/original/672259c605440_wallpaper11-(1173).jpg"
+cover_position: "center center"
+cover_ratio: "16 / 9"
+cover_opacity: "0.5"
 icon: "👨‍💻"
 pageTitle: "Francisco Colomer"
 subtitle: "GCP Presales Manager | Google Cloud Expert"
@@ -27,10 +33,10 @@ blocks:
       - icon: "cloud"
         title: "Preventa Técnica"
         body: "Diseño de soluciones GCP, RFPs, demos técnicas y acompañamiento en ciclos de venta complejos."
-      - icon: "psychology"
+      - icon: "cognition_2"
         title: "Pensamiento Crítico"
         body: "Traduzco necesidades de negocio en arquitecturas concretas. Sin humo, con criterio."
-      - icon: "robot"
+      - icon: "robot_2  "
         title: "Inteligencia Artificial"
         body: "Uso diario de Gemini y Claude para acelerar trabajo real. Construyo soluciones para clientes y side-projects personales."
 

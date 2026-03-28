@@ -4,8 +4,13 @@ description: "Badges y certificaciones en Google Cloud Skills Boost y Anthropic 
 url: "/formacion/"
 layout: "formacion"
 
-cover: "https://images.unsplash.com/photo-1650735310389-df969edf5e77?q=80&w=1740&auto=format&fit=crop"
-cover_position: "right center"
+# cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
+# cover_position: "center center"  # top center | right center | bottom center
+# cover_opacity: "0.5"          # 0 = sin oscurecer, 1 = negro total (defecto 0.5)
+cover: "https://w3.pngaura.com/assets/images/posts/original/672259c8542e0_wallpaper11-(1174).jpg"
+cover_position: "center  center"
+cover_ratio: "16 / 9"
+cover_opacity: "0.5"
 icon: "📚"
 pageTitle: "Formación Continua"
 subtitle: "La teoría es sólo la mitad..."

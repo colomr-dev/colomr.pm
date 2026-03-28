@@ -3,6 +3,13 @@ title: "Home"
 
 # Hero section
 hero:
+  # cover_position: "center center"  # top center | right center | bottom center
+  # cover_opacity: "0.55"          # 0 = sin oscurecer, 1 = negro total (defecto 0.65)
+  # cover_effect: "glass"          # glass | vignette | shadow | highlight
+  cover: "https://w3.pngaura.com/assets/images/posts/original/672259d366bc0_wallpaper11-(1179).jpg"
+  cover_opacity: "0.55"
+  cover_effect: "glass"
+  cover_position: "left center"
   chips:
     - "GOOGLE CLOUD"
     - "ANTHROPIC"
@@ -39,7 +46,7 @@ learning:
 context:
   heading: "Cuando piensas bien... la ejecución \"vibe\""
   body: "Después de tantos años ayudando a clientes, aprendí que no se trata de usar la última herramienta molona o contratar la consultora más cara. Las \"cosas\" chulas nacen de las <span class=\"context__emphasis\">personas adecuadas</span> con el <span class=\"context__emphasis\">pensamiento correcto</span>."
-  icon: "architecture"
+  icon: "person_heart"
   stat: "20+"
   statLabel: "AÑOS DE FRACASOS Y ALEGRÍAS"
 ---

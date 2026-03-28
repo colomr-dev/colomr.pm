@@ -2,7 +2,7 @@
 {{ $providers := .Params.providers }}
 
 <!-- Cover + Perfil (igual que page.html) -->
-<section class="ipage-hero"{{ with .Params.cover_position }} style="--cover-pos: {{ . }}"{{ end }}>
+<section class="ipage-hero" style="{{ with .Params.cover_position }}--cover-pos: {{ . }};{{ end }}{{ with .Params.cover_opacity }}--cover-overlay-opacity: {{ . }};{{ end }}{{ with .Params.cover_ratio }}--cover-ratio: {{ . | safeCSS }};{{ end }}">
   <div class="ipage-hero__cover" {{ with .Params.cover }}style="background-image: url('{{ . }}')"{{ end }}></div>
   <div class="ipage-hero__profile">
     <div class="ipage-hero__icon">{{ .Params.icon }}</div>
@@ -37,7 +37,9 @@
       class="ftabs__tab{{ if eq $i 0 }} ftabs__tab--active{{ end }}"
       data-tab="{{ $p.id }}"
       aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
-      {{ $p.name }}
+      {{ if eq $p.id "google" }}<img class="ftabs__icon ftabs__icon--dark" src="{{ "/images/icons/icons-gemini-black.svg" | relURL }}" alt="" /><img class="ftabs__icon ftabs__icon--light" src="{{ "/images/icons/icons-gemini-white.svg" | relURL }}" alt="" />
+      {{ else if eq $p.id "anthropic" }}<img class="ftabs__icon ftabs__icon--dark" src="{{ "/images/icons/icons-claude-black.svg" | relURL }}" alt="" /><img class="ftabs__icon ftabs__icon--light" src="{{ "/images/icons/icons-claude-white.svg" | relURL }}" alt="" />
+      {{ end }}{{ $p.name }}
     </button>
     {{ end }}
   </div>

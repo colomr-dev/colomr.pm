@@ -6,9 +6,12 @@
       </a>
     </div>
     <div class="nav-links">
-      <a href="{{ "/sobre-mi/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/sobre-mi/" }} nav-link--active{{ end }}">Quién</a>
-      <a href="{{ "/formacion/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/formacion/" }} nav-link--active{{ end }}">Qué</a>
-      <a href="{{ "/vision/" | relURL }}" class="nav-link{{ if eq .RelPermalink "/vision/" }} nav-link--active{{ end }}">Dónde</a>
+      {{ range .Site.Params.nav_links }}
+      <a href="{{ .url | relURL }}" class="nav-link{{ if eq $.RelPermalink .url }} nav-link--active{{ end }}">
+        {{ with .nav_icon }}<span class="material-symbols-outlined nav-link__icon">{{ . }}</span>{{ end }}
+        {{ .label }}
+      </a>
+      {{ end }}
     </div>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar modo de color" onclick="window.__toggleTheme()">
