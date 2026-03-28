@@ -32,15 +32,11 @@
   <a href="{{ "/" | relURL }}" class="nav-drawer__link{{ if .IsHome }} nav-drawer__link--active{{ end }}">
     <span class="material-symbols-outlined">home</span> Home
   </a>
-  <a href="{{ "/sobre-mi/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/sobre-mi/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">person</span> Quién
+  {{ range .Site.Params.nav_links }}
+  <a href="{{ .url | relURL }}" class="nav-drawer__link{{ if eq $.RelPermalink .url }} nav-drawer__link--active{{ end }}">
+    {{ with .nav_icon }}<span class="material-symbols-outlined">{{ . }}</span>{{ end }} {{ .label }}
   </a>
-  <a href="{{ "/formacion/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/formacion/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">school</span> Qué
-  </a>
-  <a href="{{ "/vision/" | relURL }}" class="nav-drawer__link{{ if eq .RelPermalink "/vision/" }} nav-drawer__link--active{{ end }}">
-    <span class="material-symbols-outlined">location_on</span> Dónde
-  </a>
+  {{ end }}
 </div>
 <div class="nav-overlay" id="nav-overlay"></div>
 
@@ -50,16 +46,10 @@
     <span class="material-symbols-outlined">home</span>
     <span>Home</span>
   </a>
-  <a href="{{ "/formacion/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/formacion/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">school</span>
-    <span>Qué</span>
+  {{ range .Site.Params.nav_links }}
+  <a href="{{ .url | relURL }}" class="bottom-nav__item{{ if eq $.RelPermalink .url }} bottom-nav__item--active{{ end }}">
+    {{ with .nav_icon }}<span class="material-symbols-outlined">{{ . }}</span>{{ end }}
+    <span>{{ .label }}</span>
   </a>
-  <a href="{{ "/sobre-mi/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/sobre-mi/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">person</span>
-    <span>Quién</span>
-  </a>
-  <a href="{{ "/vision/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/vision/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">location_on</span>
-    <span>Dónde</span>
-  </a>
+  {{ end }}
 </nav>

@@ -8,10 +8,10 @@ layout: "page"
 # cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
 # cover_position: "center center"  # top center | right center | bottom center
 # cover_opacity: "0.5"          # 0 = sin oscurecer, 1 = negro total (defecto 0.5)
-cover: "https://w3.pngaura.com/assets/images/posts/original/672259c605440_wallpaper11-(1173).jpg"
+cover: "https://www.visitvalencia.com/sites/default/files/styles/full_width_gallery_reduced_height_1920x450/public/media/media-images/images/_H3B6271_b.webp?itok=Kvqr5vEI"
 cover_position: "center center"
 cover_ratio: "16 / 9"
-cover_opacity: "0.5"
+cover_opacity: "0.50"
 icon: "👨‍💻"
 pageTitle: "Francisco Colomer"
 subtitle: "GCP Presales Manager | Google Cloud Expert"
