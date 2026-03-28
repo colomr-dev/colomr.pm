@@ -63,8 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const root = document.documentElement;
 
   function getPreferred() {
-    return localStorage.getItem(STORAGE_KEY) ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    return localStorage.getItem(STORAGE_KEY) || 'dark';
   }
 
   function applyTheme(theme) {
