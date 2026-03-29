@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Cloud Fundamentals",
+    "url": "https://example.com/badge/1",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+1",
+    "fecha": "2025-03-01"
+  },
+  {
+    "titulo": "Infrastructure Design",
+    "url": "https://example.com/badge/2",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+2",
+    "fecha": "2025-02-15"
+  },
+  {
+    "titulo": "Security Best Practices",
+    "url": "https://example.com/badge/3",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+3",
+    "fecha": "2025-01-20"
+  },
+  {
+    "titulo": "Data Analytics",
+    "url": "https://example.com/badge/4",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+4",
+    "fecha": "2024-12-10"
+  },
+  {
+    "titulo": "Machine Learning Basics",
+    "url": "https://example.com/badge/5",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+5",
+    "fecha": "2024-11-05"
+  },
+  {
+    "titulo": "Networking Essentials",
+    "url": "https://example.com/badge/6",
+    "img": "https://placehold.co/200x200/1a73e8/white?text=Badge+6",
+    "fecha": "2024-10-01"
+  }
+]

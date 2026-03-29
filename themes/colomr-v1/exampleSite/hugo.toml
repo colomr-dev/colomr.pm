@@ -1,0 +1,43 @@
+baseurl = "https://example.com/"
+title = "My Personal Site"
+theme = "colomr-v1"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+# Disable taxonomies (not used by this theme)
+[taxonomies]
+
+[params]
+  author = "Jane Doe"
+  description = "Software Engineer & Cloud Architect"
+  keywords = "portfolio, personal, cloud, engineering"
+  avatarurl = "/images/avatar.png"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
+  since = 2024
+
+# Social links (footer)
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 2
+  url = "https://linkedin.com/"
+
+# Nav links (icon = Material Symbols name)
+[[params.nav_links]]
+  label = "About"
+  url = "/about/"
+  nav_icon = "person"
+[[params.nav_links]]
+  label = "Training"
+  url = "/training/"
+  nav_icon = "school"
+[[params.nav_links]]
+  label = "Vision"
+  url = "/vision/"
+  nav_icon = "rocket_launch"
