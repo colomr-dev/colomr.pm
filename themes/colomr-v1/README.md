@@ -1,359 +1,266 @@
 # colomr-v1
 
-Tema Hugo para [colomr.pm](https://colomr.pm). Material Design 3, modo claro/oscuro nativo, sistema de bloques tipo Notion para páginas interiores.
+A personal portfolio theme for [Hugo](https://gohugo.io/) built with **Material Design 3**. Designed with [Google Stitch 2](https://stitch.withgoogle.com) and implemented with [Claude](https://claude.ai).
 
----
+Dark mode by default, responsive, lightweight, and fully configurable from front matter — no HTML editing needed.
 
-## Requisitos
+![Screenshot](images/screenshot.png)
 
-- Hugo Extended `>= 0.120.0`
-- Fuentes externas: Google Fonts (Plus Jakarta Sans + Inter + Material Symbols)
+## Features
 
----
+- Dark / Light mode toggle (dark by default)
+- Cover images with configurable overlay effects (glass, vignette, shadow, highlight)
+- Notion-style block system for interior pages (text, cards, timeline, contact)
+- Provider tabs with badge grid (for certifications/courses)
+- Material Symbols + Font Awesome icons
+- Responsive: desktop nav + mobile bottom nav
+- SCSS with MD3 design tokens (easy color/font customization)
+- Google Analytics support
 
-## Dónde se gestiona cada cosa
+## Requirements
 
-| Pregunta | Respuesta | Fichero(s) |
-|----------|-----------|------------|
-| Datos globales del sitio (título, autor, analytics, social links) | `hugo.toml` → `[params]` | `hugo.toml` |
-| Datos de una página concreta (título, bloques, cover) | Front matter del `index.md` | `content/*/index.md` |
-| Texto narrativo libre | Body del markdown (debajo del front matter) | `content/*/index.md` |
-| Datos estructurados reutilizables (badges, categorías) | Data files | `data/*.json` |
-| Assets globales (logos, favicons, avatar) | Carpeta static | `static/images/` |
-| Assets de una página concreta | Page Bundle (junto al `index.md`) | `content/*/` |
-| Estilos visuales y layout | Tema | `themes/colomr-v1/` |
-| Overrides de layout específicos del sitio | Root layouts | `layouts/` |
+- Hugo Extended >= 0.120.0
+- Google Fonts loaded via CDN (Plus Jakarta Sans, Inter, Material Symbols)
 
----
-
-## Estructura del proyecto
-
-```
-colomr.pm/
-├── hugo.toml                      # Solo configuración global del sitio
-├── content/
-│   ├── _index.md                  # Home — datos del hero, learning, context
-│   ├── quien/
-│   │   └── index.md               # Page Bundle — front matter con bloques
-│   ├── donde/
-│   │   └── index.md               # Page Bundle
-│   ├── que/
-│   │   └── index.md               # Page Bundle
-│   └── badges/
-│       └── index.md               # Page Bundle — type: badges
-├── data/
-│   ├── badges.json                # Badges de Google Cloud Skills Boost
-│   └── categorias.json            # Categorías con icono y color
-├── static/images/                 # Assets globales (avatar, logos, favicons)
-├── layouts/                       # Overrides raíz (se eliminarán al completar el tema)
-│   ├── badges/single.html         # Entry point → partial badges.html
-│   └── partials/
-│       ├── badges.html            # Grid de badges con filtros y paginación
-│       ├── header.html            # Nav, drawer móvil, bottom nav
-│       └── footer.html            # Footer con social links
-└── themes/colomr-v1/              # EL TEMA
-    ├── assets/
-    │   ├── scss/
-    │   │   ├── main.scss          # Entry point — importa el resto
-    │   │   ├── _tokens.scss       # Design tokens MD3 (colores, tipografía, spacing)
-    │   │   ├── _components.scss   # Header, footer, nav, botones, chips
-    │   │   ├── _home.scss         # Estilos del Home
-    │   │   └── _page.scss         # Estilos de páginas interiores
-    │   └── js/
-    │       ├── main.js            # Toggle dark/light + drawer móvil
-    │       └── badges.js          # Filtros, paginación y scroll-to-top de badges
-    ├── layouts/
-    │   ├── index.html             # Home — lee de content/_index.md front matter
-    │   ├── _default/
-    │   │   ├── baseof.html        # Plantilla base (head, header, main, footer)
-    │   │   ├── page.html          # Páginas interiores — lee bloques del front matter
-    │   │   └── single.html        # Fallback genérico — renderiza .Content
-    │   └── partials/
-    │       ├── header.html        # Nav + drawer móvil + bottom nav
-    │       ├── footer.html        # Footer con créditos
-    │       ├── scripts.html       # JS compilado con fingerprint
-    │       ├── icons/
-    │       │   ├── google-cloud.html
-    │       │   └── anthropic.html
-    │       └── head/
-    │           ├── meta.html      # SEO, favicons
-    │           ├── fonts.html     # Google Fonts
-    │           ├── styles.html    # SCSS compilado con fingerprint
-    │           └── analytics.html # GA4 (solo en producción)
-    └── theme.toml
-```
-
----
-
-## Convención Hugo que seguimos
-
-```
-hugo.toml        →  configuración global, [params], [menus], taxonomías
-front matter     →  datos de cada página (bloques, cover, icon, subtitle...)
-body markdown    →  contenido narrativo (renderizado con {{ .Content }})
-data/*.json      →  datos estructurados reutilizables
-Page Bundles     →  cada página es una carpeta con index.md (content/*/index.md)
-partials         →  trozos reutilizables de layout
-assets/          →  SCSS y JS procesados por Hugo Pipes (minify + fingerprint)
-static/          →  solo assets globales (logos, favicons)
-```
-
----
-
-## Páginas interiores — sistema de bloques
-
-Las páginas interiores usan `layout: "page"` y definen su contenido en el **front matter YAML** del `index.md`, no en `hugo.toml`.
-
-### Crear una página nueva
-
-**1. Crear el Page Bundle:**
+## Installation
 
 ```bash
-mkdir content/mi-pagina
+cd your-hugo-site
+git submodule add https://github.com/colomr-dev/colomr-v1-theme.git themes/colomr-v1
 ```
 
-**2. Crear `content/mi-pagina/index.md`:**
+Set the theme in `hugo.toml`:
 
-```yaml
----
-title: "Mi Página"
-description: "Descripción para SEO"
-url: "/mi-pagina/"
-layout: "page"
-
-cover: "/images/mi-cover.jpg"
-icon: "🚀"
-pageTitle: "Título visible en la página"
-subtitle: "Una línea descriptiva"
-
-tags_list:
-  - label: "Tag 1"
-  - label: "Tag 2"
-
-blocks:
-  - type: "text"
-    heading: "Sección de texto"
-    body: "Contenido del párrafo."
-
-  - type: "cards"
-    heading: "Tarjetas"
-    items:
-      - icon: "architecture"
-        title: "Card 1"
-        body: "Descripción"
-
-  - type: "timeline"
-    heading: "Trayectoria"
-    items:
-      - role: "Cargo"
-        company: "Empresa"
-        period: "2021 – presente"
-
-  - type: "contact"
-    heading: "Contacto"
-    items:
-      - label: "LinkedIn"
-        url: "https://linkedin.com/in/..."
-        icon: "fa fa-linkedin"
----
+```toml
+theme = "colomr-v1"
 ```
 
-**3. (Opcional) Colocar assets junto al `index.md`:**
+## Quick start
 
-```
-content/mi-pagina/
-├── index.md
-├── cover.jpg      # asset local del Page Bundle
-└── diagram.png
-```
+Copy the `exampleSite/` contents to your project root and run:
 
-Accesibles en el template con `{{ .Resources.GetMatch "cover.*" }}`.
-
----
-
-### Tipos de bloque disponibles
-
-#### `text` — Párrafo de texto
-
-```yaml
-- type: "text"
-  heading: "Sobre mí"       # opcional
-  body: "Texto del párrafo"
+```bash
+hugo server
 ```
 
-#### `cards` — Tarjetas en grid (1–3 columnas según pantalla)
+## Configuration
 
-```yaml
-- type: "cards"
-  heading: "En qué destaco"  # opcional
-  items:
-    - icon: "architecture"    # nombre de Material Symbol
-      title: "Título"
-      body: "Descripción breve"
+### hugo.toml
+
+```toml
+baseurl = "https://example.com/"
+title = "My Personal Site"
+theme = "colomr-v1"
+languagecode = "en"
+
+# Disable taxonomies (not used)
+[taxonomies]
+
+[params]
+  author = "Jane Doe"
+  description = "Software Engineer"
+  keywords = "portfolio, cloud, engineering"
+  avatarurl = "/images/avatar.png"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
+  since = 2024
+
+# Social links (displayed in footer)
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/"
+
+# Navigation links (icon = Material Symbols name)
+[[params.nav_links]]
+  label = "About"
+  url = "/about/"
+  nav_icon = "person"
 ```
 
-#### `timeline` — Línea de tiempo
+### Static assets
 
-```yaml
-- type: "timeline"
-  heading: "Trayectoria"
-  items:
-    - role: "Cargo o título"
-      company: "Empresa"
-      period: "2021 – presente"
-```
+Place these files in `static/images/`:
 
-#### `contact` — Links de contacto
+| File | Purpose | Recommended size |
+|------|---------|-----------------|
+| `logo.png` | Site logo (header) | 120x120 px |
+| `avatar.png` | Author avatar (header) | 200x200 px |
+| `favicon-32x32.png` | Browser favicon | 32x32 px |
+| `favicon-16x16.png` | Browser favicon | 16x16 px |
 
-```yaml
-- type: "contact"
-  heading: "Encuéntrame en"
-  items:
-    - label: "LinkedIn"
-      url: "https://linkedin.com/in/..."
-      icon: "fa fa-linkedin"
-```
+## Layouts
 
-### Añadir un nuevo tipo de bloque
+### Home page (`index.html`)
 
-1. Añadir `{{ else if eq .type "nuevo" }}` en `themes/colomr-v1/layouts/_default/page.html`
-2. Añadir estilos en `themes/colomr-v1/assets/scss/_page.scss`
-3. Documentar el schema YAML en este README
-
----
-
-## Home page
-
-El contenido del home se gestiona desde `content/_index.md`. El front matter define tres secciones:
+The home page reads from `content/_index.md` front matter. Three sections:
 
 ```yaml
 hero:
-  chips: ["GOOGLE CLOUD", "ANTHROPIC"]
-  title: "Texto antes del "
-  titleHighlight: "gradiente"
-  subtitle: "Subtítulo"
-  subtitleEmphasis: "texto en cursiva"
-  subtitleEmoji: "🤖"
+  cover: "/images/covers/hero.webp"          # background image (optional)
+  cover_opacity: "0.55"                       # overlay opacity 0-1 (default 0.65)
+  cover_effect: "glass"                       # glass | vignette | shadow | highlight
+  cover_position: "center center"             # CSS background-position
+  chips: ["CLOUD", "AI"]
+  title: "Build, Ship &"
+  titleHighlight: "Scale"                     # gradient text
+  subtitle: "Your tagline here"
+  subtitleEmphasis: "in italics"
+  subtitleEmoji: "🚀"
   ctas:
-    - label: "CTA primario"
-      url: "/quien/"
-      style: "primary"
-    - label: "CTA secundario"
-      url: "/donde/"
-      style: "ghost"
+    - label: "About me"
+      url: "/about/"
+      style: "primary"                        # primary | ghost
 
 learning:
-  title: "Aprendizaje Continuo"
-  subtitle: "Subtítulo"
+  title: "Section Title"
+  subtitle: "Section subtitle"
   cards:
-    - name: "Google"
-      desc: "Descripción"
-      url: "/que/"
-      icon: "google-cloud"        # partial en partials/icons/
-      cssModifier: ""
-    - name: "Anthropic"
-      desc: "Descripción"
-      url: "/que/"
-      icon: "anthropic"
-      cssModifier: "learning-card--anthropic"
+    - name: "Card Name"
+      desc: "Description"
+      url: "/link/"
+      icon: "my-icon"                         # loads partials/icons/my-icon.html (optional)
+      cssModifier: ""                         # extra CSS class (optional)
 
 context:
-  heading: "Título"
-  body: "Texto"
-  icon: "architecture"            # Material Symbol
-  stat: "20+"
-  statLabel: "LABEL"
+  heading: "A bold statement"
+  body: "Supporting text. Use <span class=\"context__emphasis\">emphasis</span> for highlights."
+  icon: "architecture"                        # Material Symbol name
+  stat: "10+"
+  statLabel: "YEARS OF EXPERIENCE"
 ```
 
-Los SVG de las learning cards se gestionan como **partials** en `themes/colomr-v1/layouts/partials/icons/`. Para añadir uno nuevo, crear el fichero `.html` con el SVG y referenciarlo por nombre en el campo `icon`.
+### Blocks page (`blocks.html`)
 
----
+For interior pages with a Notion-style block system. Set `layout: "blocks"` in front matter.
 
-## Badges
+```yaml
+layout: "blocks"
+cover: "/images/covers/about.webp"
+cover_ratio: "3 / 1"                          # 3/1 (default) | 16/9 | 4/1
+cover_position: "center center"
+cover_opacity: "0.5"
+icon: "👩‍💻"
+pageTitle: "Page Title"
+subtitle: "Subtitle"
+tags_list:
+  - label: "Tag"
 
-La página de badges (`content/badges/index.md`) usa `type: "badges"` y se alimenta de:
+blocks:
+  - type: "text"
+    heading: "Heading"
+    body: "Paragraph text."
 
-- `data/badges.json` — array de badges (título, imagen, fecha, URL, descripción, categoría)
-- `data/categorias.json` — definiciones de categoría (id, nombre, icono, color)
-- Front matter — `pageTitle`, `profileUrl`, `profileLinkText`
+  - type: "cards"
+    heading: "Heading"
+    items:
+      - icon: "cloud"                         # Material Symbol name
+        title: "Card Title"
+        body: "Card description"
 
-El JS de filtros y paginación está en `themes/colomr-v1/assets/js/badges.js`, cargado via Hugo Pipes con minificación y fingerprint.
+  - type: "timeline"
+    heading: "Experience"
+    items:
+      - role: "Job Title"
+        company: "Company"
+        period: "2022 – present"
 
----
-
-## Navegación
-
-El tema tiene tres sistemas de navegación, uno por contexto:
-
-| Componente | Dónde se ve | Estado actual |
-|------------|-------------|---------------|
-| **Nav links** | Desktop (>= 768px) | Activo |
-| **Bottom nav** | Móvil (< 768px) | Activo |
-| **Hamburger + Drawer** | Móvil (< 768px) | Oculto via CSS |
-
-### Bottom nav (móvil)
-
-Navegación principal en móvil. Fijo en la parte inferior con 4 ítems: Home, Quién, Qué, Dónde. Se define en `layouts/partials/header.html`.
-
-### Hamburger + Drawer (desactivado)
-
-El código HTML y JS del hamburger/drawer están presentes pero ocultos via CSS. Para reactivarlos, descomentar las líneas marcadas en `assets/scss/_components.scss`:
-
-```scss
-// En .nav-hamburger:
-// @media (max-width: 767px) { display: flex; }
-
-// En .nav-drawer:
-// @media (max-width: 767px) { display: flex; transform: translateX(100%); }
-// &.is-open { @media (max-width: 767px) { transform: translateX(0); } }
-
-// En .nav-overlay:
-// &.is-open { display: block !important; }
-// @media (min-width: 768px) { display: none !important; }
+  - type: "contact"
+    heading: "Get in touch"
+    body: "Optional intro text."              # displayed above links
+    items:
+      - label: "LinkedIn"
+        url: "https://linkedin.com/"
+        icon: "fa fa-linkedin"                # Font Awesome 4 class
 ```
 
-Esto permite usar ambos sistemas (drawer para navegación secundaria/settings, bottom nav para la primaria) sin reescribir código.
+### Providers page (`providers.html`)
 
-### Nav links (desktop)
+For displaying badges/certifications organized by provider tabs. Set `layout: "providers"` in front matter.
 
-Links horizontales en el header. Se definen en `layouts/partials/header.html`. Se ocultan en móvil y se muestran a partir de 768px.
+```yaml
+layout: "providers"
 
----
+intro:
+  heading: "Intro Title"
+  body: "Intro paragraph."
 
-## Diseño y tokens
-
-Los design tokens están en `assets/scss/_tokens.scss` como custom properties CSS:
-
-```scss
-var(--color-primary)                // #0058bd
-var(--color-surface-container-low)  // fondo de secciones
-var(--color-on-surface)             // texto principal
-var(--font-display)                 // Plus Jakarta Sans
-var(--font-body)                    // Inter
-var(--space-6)                      // 1.5rem
-var(--radius-xl)                    // 1.5rem
+providers:
+  - id: "provider-a"                          # used for tab switching
+    name: "Provider A"                        # tab label
+    profile_url: "https://..."                # link button (omit to hide)
+    profile_label: "View my profile"
+    data: "badges_a"                          # loads data/badges_a.json
 ```
 
-El modo oscuro se activa por preferencia del sistema (`prefers-color-scheme`) o manualmente con `data-theme="dark"/"light"` en `<html>`. El toggle llama a `window.__toggleTheme()`.
+#### Badge data format
 
----
+Create a JSON file in `data/` for each provider:
 
-## Iconos
+```json
+[
+  {
+    "titulo": "Badge Name",
+    "url": "https://link-to-badge",
+    "img": "https://badge-image-url.png",
+    "fecha": "2025-03-01"
+  }
+]
+```
 
-| Sistema | Uso | Sintaxis |
-|---------|-----|----------|
-| **Material Symbols Outlined** | UI (nav, bloques, cards) | `<span class="material-symbols-outlined">home</span>` |
-| **Font Awesome 4** | Social links, contacto | `<i class="fa fa-github"></i>` |
+The theme displays the **6 most recent** badges per provider, sorted by `fecha`.
 
----
+## Customization
 
-## Comandos
+### Colors and fonts
+
+Edit `assets/scss/_tokens.scss`. All colors follow the MD3 color system. Use [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/) to generate a palette and replace the CSS custom properties.
+
+Key variables:
+
+| Variable | Purpose |
+|----------|---------|
+| `--color-primary` | Brand color, CTAs, active states |
+| `--color-background` | Page background |
+| `--color-on-surface` | Main text color |
+| `--font-display` | Headings font |
+| `--font-body` | Body text font |
+| `--gradient-primary` | Title highlight gradient |
+
+### Icons
+
+| System | Usage | Browse |
+|--------|-------|--------|
+| Material Symbols Outlined | UI, nav, block cards | [fonts.google.com/icons](https://fonts.google.com/icons) |
+| Font Awesome 4.7 | Social links, contact | [fontawesome.com/v4/icons](https://fontawesome.com/v4/icons/) |
+
+### Adding a new block type
+
+1. Add `{{ else if eq .type "myblock" }}` in `layouts/_default/blocks.html`
+2. Add styles in `assets/scss/_page.scss`
+3. Use it in front matter: `- type: "myblock"`
+
+### Learning card icons
+
+The home page learning cards can optionally display custom icons via Hugo partials. Create `layouts/partials/icons/my-icon.html` with your SVG or `<img>` and reference it with `icon: "my-icon"` in the front matter.
+
+## Commands
 
 ```bash
-hugo server                  # desarrollo local con live reload
-hugo --cleanDestinationDir   # build de producción
+hugo server                          # local dev with live reload
+hugo --cleanDestinationDir           # production build
+
+# Run exampleSite
+hugo server --source themes/colomr-v1/exampleSite --themesDir ../..
 ```
 
----
+## License
 
-*Tema diseñado con [Stitch](https://stitch.withgoogle.com) e implementado con Claude.*
+GPL-3.0 — See [LICENSE](LICENSE) for details.
+
+## Author
+
+**Francisco Colomer** — [colomr.pm](https://colomr.pm)
+
+Designed with [Google Stitch 2](https://stitch.withgoogle.com) and built with [Claude](https://claude.ai).
