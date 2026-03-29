@@ -11,12 +11,20 @@
 // --- Tabs (pill style) ---
 .ftabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   margin-bottom: 2.5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .ftabs__tab { width: 100%; }
+  }
 }
 
 .ftabs__tab {
@@ -31,6 +39,10 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
   background: var(--color-surface-container-high);
   color: var(--color-on-surface-variant);

@@ -8,10 +8,10 @@ layout: "page"
 # cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
 # cover_position: "top center"  # top center | right center | bottom center
 # cover_opacity: "0.5"          # 0 = sin oscurecer, 1 = negro total (defecto 0.5)
-cover: "https://7televalencia.com/wp-content/uploads/2025/10/76ddf4dd-94f3-41da-9579-a36e0b300708_16-9-discover-aspect-ratio_default_0-e1759420777959.jpg"
+cover: "https://images.unsplash.com/photo-1601348127372-1aa05c611266?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 cover_ratio: "16 / 9"
 cover_position: "center center"
-cover_opacity: "0.7"
+cover_opacity: "0.4"
 icon: "🔭"
 pageTitle: "Visión"
 subtitle: "En la era de la IA"
