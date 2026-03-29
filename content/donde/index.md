@@ -2,7 +2,7 @@
 title: "Visión"
 description: "Visión profesional y hacia dónde voy — Francisco Colomer"
 url: "/vision/"
-layout: "page"
+layout: "blocks"
 
 # Page hero data
 # cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1

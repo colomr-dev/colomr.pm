@@ -2,7 +2,7 @@
 title: "Formación"
 description: "Badges y certificaciones en Google Cloud Skills Boost y Anthropic Academy"
 url: "/formacion/"
-layout: "formacion"
+layout: "providers"
 
 # cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
 # cover_position: "center center"  # top center | right center | bottom center
