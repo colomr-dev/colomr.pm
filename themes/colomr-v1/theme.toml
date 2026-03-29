@@ -1,6 +1,6 @@
 name = "colomr-v1"
-license = "Pendiente"
-licenselink = ""
+license = "GPL-3.0"
+licenselink = "https://github.com/colomr-dev/colomr-v1-theme/blob/main/LICENSE"
 description = "Tema personal basado en Material Design 3, diseñado con Google Stitch 2"
 homepage = "https://colomr.pm"
 min_version = "0.120.0"
