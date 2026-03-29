@@ -1,14 +1,28 @@
 name = "colomr-v1"
-license = "MIT"
-licenselink = "https://github.com/colomr-dev/colomr.pm/blob/main/LICENSE"
-description = "Tema personal para colomr.pm — diseño propio basado en Material Design 3"
+license = "Pendiente"
+licenselink = ""
+description = "Tema personal basado en Material Design 3, diseñado con Google Stitch 2"
 homepage = "https://colomr.pm"
 min_version = "0.120.0"
+tags = [
+  "personal",
+  "material-design",
+  "responsive",
+  "dark-mode",
+  "light-mode",
+  "minimal",
+  "portfolio"
+]
+features = [
+  "dark-light-toggle",
+  "cover-overlay-effects",
+  "glassmorphism",
+  "material-symbols",
+  "badge-grid",
+  "block-system",
+  "scss"
+]
 
 [author]
   name = "Francisco Colomer"
   homepage = "https://colomr.pm"
-
-[features]
-  customSCSS = true
-  customJS = true
