@@ -1,5 +1,5 @@
 ---
-title: "Quién"
+title: "Sobre mí"
 description: "Francisco Colomer — Presales Engineer especializado en Google Cloud"
 url: "/sobre-mi/"
 layout: "page"

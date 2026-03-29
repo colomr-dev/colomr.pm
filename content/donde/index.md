@@ -1,5 +1,5 @@
 ---
-title: "Dónde"
+title: "Visión"
 description: "Visión profesional y hacia dónde voy — Francisco Colomer"
 url: "/vision/"
 layout: "page"
