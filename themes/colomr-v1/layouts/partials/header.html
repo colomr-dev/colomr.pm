@@ -1,15 +1,13 @@
 <header class="site-header">
   <nav class="site-nav">
     <div class="nav-brand">
-      <span class="material-symbols-outlined nav-icon">home</span>
-      <a href="{{ "/" | relURL }}" class="nav-name">{{ .Site.Params.author }}</a>
+      <a href="{{ "/" | relURL }}" class="nav-logo-link">
+        <img src="/images/logo.png" alt="{{ .Site.Params.author }}" class="nav-logo" />
+      </a>
     </div>
     <div class="nav-links">
       {{ range .Site.Params.nav_links }}
-      {{ $page := site.GetPage .url }}
-      {{ $href := cond (ne $page nil) $page.RelPermalink (.url | relURL) }}
-      {{ $active := and (ne $page nil) (eq $.RelPermalink $page.RelPermalink) }}
-      <a href="{{ $href }}" class="nav-link{{ if $active }} nav-link--active{{ end }}">
+      <a href="{{ .url | relURL }}" class="nav-link{{ if eq $.RelPermalink .url }} nav-link--active{{ end }}">
         {{ with .nav_icon }}<span class="material-symbols-outlined nav-link__icon">{{ . }}</span>{{ end }}
         {{ .label }}
       </a>
@@ -22,9 +20,25 @@
       <div class="nav-avatar">
         <img src="{{ .Site.Params.avatarurl | default "/images/avatar.png" }}" alt="{{ .Site.Params.author }}" />
       </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
   </nav>
 </header>
+
+<!-- Drawer móvil -->
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <a href="{{ "/" | relURL }}" class="nav-drawer__link{{ if .IsHome }} nav-drawer__link--active{{ end }}">
+    <span class="material-symbols-outlined">home</span> Home
+  </a>
+  {{ range .Site.Params.nav_links }}
+  <a href="{{ .url | relURL }}" class="nav-drawer__link{{ if eq $.RelPermalink .url }} nav-drawer__link--active{{ end }}">
+    {{ with .nav_icon }}<span class="material-symbols-outlined">{{ . }}</span>{{ end }} {{ .label }}
+  </a>
+  {{ end }}
+</div>
+<div class="nav-overlay" id="nav-overlay"></div>
 
 <!-- Bottom nav (solo móvil) -->
 <nav class="bottom-nav" aria-label="Navegación principal">
@@ -32,16 +46,10 @@
     <span class="material-symbols-outlined">home</span>
     <span>Home</span>
   </a>
-  <a href="{{ "/que/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/que/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">school</span>
-    <span>Qué</span>
+  {{ range .Site.Params.nav_links }}
+  <a href="{{ .url | relURL }}" class="bottom-nav__item{{ if eq $.RelPermalink .url }} bottom-nav__item--active{{ end }}">
+    {{ with .nav_icon }}<span class="material-symbols-outlined">{{ . }}</span>{{ end }}
+    <span>{{ .label }}</span>
   </a>
-  <a href="{{ "/quien/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/quien/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">person</span>
-    <span>Quién</span>
-  </a>
-  <a href="{{ "/donde/" | relURL }}" class="bottom-nav__item{{ if eq .RelPermalink "/donde/" }} bottom-nav__item--active{{ end }}">
-    <span class="material-symbols-outlined">location_on</span>
-    <span>Dónde</span>
-  </a>
+  {{ end }}
 </nav>
