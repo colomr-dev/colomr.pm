@@ -8,7 +8,7 @@ layout: "blocks"
 # cover_ratio: "3 / 1"          # 3/1 (defecto) | 16/9 | 4/1 | 2.5/1
 # cover_position: "top center"  # top center | right center | bottom center
 # cover_opacity: "0.5"          # 0 = sin oscurecer, 1 = negro total (defecto 0.5)
-cover: "https://images.unsplash.com/photo-1601348127372-1aa05c611266?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+cover: "https://images.unsplash.com/photo-1648607200576-12a71a662ec1"
 cover_ratio: "16 / 9"
 cover_position: "center center"
 cover_opacity: "0.4"
