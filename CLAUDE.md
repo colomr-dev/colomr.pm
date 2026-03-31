@@ -159,8 +159,19 @@ git -c commit.gpgsign=false commit   # commit sin GPG
 hugo server --source themes/colomr-v1/exampleSite --themesDir ../..
 ```
 
+## Versionado (SemVer)
+Usamos **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
+- **MAJOR** — breaking changes, reescrituras (v1→v2)
+- **MINOR** — nuevas funcionalidades compatibles (nuevo bloque, efecto, etc.)
+- **PATCH** — bug fixes, ajustes visuales
+
+Versión actual: **v2.0.0** (tema colomr-v1, MD3, deploy automático).
+Se marca con `git tag` + GitHub Release en cada versión.
+
 ## Preferencias de workflow con Claude
-- Puede hacer commit y push directamente, pero avisar antes con una frase breve
+- Siempre trabajar en **feature branches** con **PRs** contra main. Nunca push directo a main.
+- Push a main dispara deploy automático (no hace falta `hugo` ni `firebase deploy` en local)
+- Avisar antes de hacer commit con una frase breve
 - Imágenes: el usuario las elige y pasa la URL — Claude no las busca solo
 - Paso a paso con aprobación del usuario para cambios estructurales
 
