@@ -3,7 +3,7 @@
 ## Qué es este proyecto
 Sitio web personal generado con **Hugo** y desplegado en **Firebase Hosting**.
 Muestra badges/certificaciones de Google Cloud Skills Boost y Anthropic Academy.
-Rama activa de desarrollo: **`feature/colomr-v1`** (NO mergear a main hasta terminar).
+Rama principal: **`main`**. Tema colomr-v1 mergeado y en producción.
 
 ## Estructura clave
 - `hugo.toml` — configuración Hugo (convención moderna)
