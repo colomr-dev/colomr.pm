@@ -3,56 +3,74 @@
 ## Qué es este proyecto
 Sitio web personal generado con **Hugo** y desplegado en **Firebase Hosting**.
 Muestra badges/certificaciones de Google Cloud Skills Boost y Anthropic Academy.
-Rama principal: **`main`**. Tema colomr-v1 mergeado y en producción.
+Rama principal: **`main`**. Tema colomr-v1 en producción.
 
 ## Estructura clave
-- `hugo.toml` — configuración Hugo (convención moderna)
-- `data/badges.json` — badges Google Cloud Skills Boost
-- `data/anthropic_badges.json` — badges Anthropic Academy (manual por ahora)
-- `data/categorias.json` — categorías de badges con icono y color
-- `scripts/sync_badges.py` — script de sincronización automática (solo Google por ahora)
-- `.github/workflows/sync-badges.yml` — workflow GitHub Actions (pendiente adaptar para Anthropic)
-- `themes/colomr-v1/` — tema propio Material Design 3 (EN DESARROLLO)
-- `content/*/index.md` — Page Bundles, todo el contenido en front matter YAML
+- `hugo.toml` — configuración Hugo
+- `data/badges.json` — 6 últimos badges Google Cloud Skills Boost
+- `data/anthropic_badges.json` — badges Anthropic Academy (manual)
+- `scripts/sync_badges.py` — sincronización automática de badges Google
+- `scripts/MANUAL_BADGES.md` — procedimiento manual para badges Anthropic
+- `.github/workflows/sync-badges.yml` — sync semanal (lunes 8:00 UTC)
+- `.github/workflows/sync-theme.yml` — sincroniza tema al repo público (pendiente PAT)
+- `themes/colomr-v1/` — submódulo git → https://github.com/colomr-dev/colomr-v1-theme
+- `layouts/` — overrides personales (footer, iconos gemini/claude)
+- `content/*/index.md` — Page Bundles, contenido en front matter YAML
 
-## Tema colomr-v1 — Estado actual
-Nuevo tema construido desde cero con Material Design 3. Reemplaza `hugo-coder`.
+## Tema colomr-v1
+Tema propio Material Design 3, diseñado con Google Stitch 2. Licencia GPL-3.0.
+Es un submódulo git — los cambios al tema se hacen dentro del submódulo y se sincronizan al repo público.
 
-### Páginas implementadas
+### Páginas
 | URL | Archivo | Layout | Estado |
 |-----|---------|--------|--------|
-| `/` | `content/_index.md` | `home.html` | ✅ Completa |
-| `/sobre-mi/` | `content/quien/index.md` | `page.html` | ✅ Completa |
-| `/formacion/` | `content/que/index.md` | `formacion.html` | ✅ Completa |
-| `/vision/` | `content/donde/index.md` | `page.html` | ⏳ Pendiente contenido |
+| `/` | `content/_index.md` | `index.html` | ✅ Completa |
+| `/sobre-mi/` | `content/quien/index.md` | `blocks.html` | ✅ Completa |
+| `/formacion/` | `content/que/index.md` | `providers.html` | ✅ Completa |
+| `/vision/` | `content/donde/index.md` | `blocks.html` | ✅ Completa |
 
 ### Estructura del tema
 ```
-themes/colomr-v1/
+themes/colomr-v1/              (submódulo → colomr-v1-theme)
 ├── assets/
 │   ├── scss/
-│   │   ├── main.scss        — importa todo
-│   │   ├── _tokens.scss     — variables MD3 (light + dark)
-│   │   ├── _components.scss — header, nav, botones, chips
-│   │   ├── _home.scss       — página home
-│   │   ├── _page.scss       — páginas interiores (ipage-*)
-│   │   └── _formacion.scss  — tabs + badge grid
-│   └── js/main.js           — hamburger, tabs, dark/light toggle
-└── layouts/
-    ├── _default/
-    │   ├── baseof.html
-    │   ├── home.html
-    │   ├── page.html        — sistema de bloques Notion-style
-    │   └── formacion.html   — tabs de providers + badges
-    └── partials/
-        ├── head/            — meta, fonts, styles, analytics
-        ├── header.html
-        ├── footer.html
-        └── scripts.html
+│   │   ├── main.scss          — importa todo
+│   │   ├── _tokens.scss       — variables MD3 (colores, fuentes, spacing)
+│   │   ├── _components.scss   — header, nav, botones, chips
+│   │   ├── _home.scss         — hero + secciones home + efectos cover
+│   │   ├── _page.scss         — páginas interiores (bloques)
+│   │   └── _formacion.scss    — tabs pill + badge grid
+│   └── js/main.js             — dark/light toggle, tabs, hamburger
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html        — base (head, header, footer, GitHub corner)
+│   │   ├── blocks.html        — sistema de bloques Notion-style
+│   │   ├── providers.html     — tabs de providers + badges
+│   │   └── single.html        — fallback genérico
+│   ├── index.html             — home page
+│   └── partials/
+│       ├── head/              — meta, fonts, styles, analytics
+│       ├── header.html        — nav desktop + drawer + bottom nav
+│       ├── footer.html        — social links + credits
+│       └── scripts.html       — JS loader
+├── exampleSite/               — contenido demo para galería Hugo Themes
+├── images/                    — screenshot.png y tn.png
+├── LICENSE                    — GPL-3.0
+├── README.md                  — documentación completa del tema
+└── theme.toml
 ```
 
-### Sistema de bloques (page.html)
-Las páginas interiores usan bloques YAML en front matter:
+### Overrides personales (en raíz, fuera del tema)
+```
+layouts/
+├── partials/
+│   ├── footer.html            — footer con enlace a colomr-v1
+│   └── icons/
+│       ├── gemini.html        — logo Gemini (learning cards)
+│       └── claude.html        — logo Claude (learning cards)
+```
+
+### Sistema de bloques (blocks.html)
 ```yaml
 blocks:
   - type: "text"
@@ -61,7 +79,7 @@ blocks:
   - type: "cards"
     heading: "Título"
     items:
-      - icon: "material_symbol"
+      - icon: "cloud"          # Material Symbol
         title: "Título card"
         body: "Texto"
   - type: "timeline"
@@ -72,79 +90,81 @@ blocks:
         period: "Fecha"
   - type: "contact"
     heading: "Título"
+    body: "Texto introductorio"
     items:
-      - icon: "fa-linkedin"   # Font Awesome 4.7
+      - icon: "fa fa-linkedin"  # Font Awesome 4.7
         label: "Texto"
         url: "https://..."
 ```
 
 ### Imágenes de cabecera (cover)
-- Usar imágenes **landscape / 16:9 o más anchas** para que `background-size: cover` funcione bien
-- Default `background-position: top center` (CSS var `--cover-pos`)
-- Override por página: `cover_position: "right center"` en front matter
-- Las imágenes portrait se cortan (comportamiento CSS estándar, no es un bug)
+- Tamaño recomendado: **1920x1080 (16:9)**, formato WebP, calidad 80%
+- Parámetros configurables en front matter:
+  - `cover` — URL de la imagen
+  - `cover_position` — CSS background-position (default: `center center`)
+  - `cover_opacity` — opacidad del overlay 0-1 (default: 0.5 interiores, 0.65 home)
+  - `cover_ratio` — aspect ratio del contenedor (default: `3 / 1`, opciones: `16 / 9`, `4 / 1`)
+  - `cover_effect` — solo home: `glass` | `vignette` | `shadow` | `highlight`
+- Overlay adaptativo: negro en dark mode, blanco en light mode
 
-### Providers de Formación
+### Providers de Formación (providers.html)
 ```yaml
 providers:
   - id: "google"
     name: "Google Cloud Skills Boost"
-    profile_url: "https://www.skills.google/public_profiles/..."
-    profile_label: "Ver mi perfil en Google Skills Boost"
-    data: "badges"           # → data/badges.json
+    profile_url: "https://..."    # omitir para ocultar botón
+    profile_label: "Ver mi perfil"
+    data: "badges"                # → data/badges.json
   - id: "anthropic"
     name: "Anthropic Academy"
-    profile_url: "https://verify.skilljar.com/c/46ocuxdgxcvz"
-    profile_label: "Ver mi perfil en Anthropic Academy"
-    data: "anthropic_badges" # → data/anthropic_badges.json
+    data: "anthropic_badges"      # → data/anthropic_badges.json
 ```
-Badge grid: `auto-fill, minmax(280px, 1fr)` — 2 columnas desktop/tablet, 1 móvil.
+Muestra los **6 badges más recientes** de cada provider. Tabs estilo pill con logos.
 
-## Decisiones de diseño tomadas
-- **No hay página de listado de badges** — cada provider muestra los 5 últimos + enlace a perfil oficial
-- **Imágenes de badges Anthropic**: guardadas local en `static/images/` optimizadas con sharp (node)
-  - Original: `anthropic-claude101.jpg` (3300×2550, backup)
-  - Optimizada: `anthropic-claude101-opt.jpg` (600×463, 14KB, en uso)
-- **Logos Google/Anthropic**: SVG inline en `content/_index.md` con `currentColor` para dark/light
-- **Font Awesome 4.7** para iconos de contacto/social; **Material Symbols Outlined** para UI
-- **GPG signing desactivado** para commits: `git -c commit.gpgsign=false commit`
-- **Imágenes Unsplash**: provisionales, pendiente elegir definitivas con "alma"
-  - Formación: `photo-1650735310389-df969edf5e77` (libros, `cover_position: right center`)
-  - Sobre mí: pendiente — necesita imagen landscape
-  - Visión: pendiente contenido y imagen
+### Navegación
+- Configurada en `hugo.toml` → `[[params.nav_links]]`
+- Iconos de Material Symbols, configurables con `nav_icon`
+- Se renderiza en desktop nav, drawer móvil y bottom nav
 
-## Tareas pendientes (por orden)
-1. ⏳ Imagen landscape para `/sobre-mi/` (la actual es portrait, se corta mal)
-2. ⏳ Contenido de `/vision/` (bloques YAML)
-3. ⏳ Imágenes definitivas con "alma" para las 3 páginas
-4. ⏳ Merge `feature/colomr-v1` → `main`
-5. ⏳ Adaptar GitHub Actions para sincronizar Anthropic Academy además de Google
-6. ⏳ Toggle `enabled: false` para bloques en page.html (aplazado)
+### GitHub Corner
+- Activo por defecto apuntando al repo del tema
+- Desactivar con `github_corner = "false"` en `hugo.toml`
 
-## Workflow de sincronización automática (Sync Badges)
-El workflow se ejecuta cada 2 días (cron `0 8 */2 * *`) o manualmente:
-1. Scrapa el perfil público de Google Skills
-2. Detecta badges nuevos por fecha comparando con `data/badges.json`
-3. Genera descripción en español y categoría via Gemini API
+## Workflow de sincronización de badges
+Se ejecuta cada lunes (cron `0 8 * * 1`) o manualmente:
+1. Scrapa los 6 badges más recientes del perfil Google Skills
+2. Detecta nuevos comparando por URL con `data/badges.json`
+3. Genera descripción en español via Gemini API
 4. Si hay cambios: build Hugo + deploy Firebase + commit al repo
 
-### Gemini API — modelos y cuota
-La API key se pasa como `GOOGLE_API_KEY` (secret `GEMINI_API_KEY` en GitHub Actions).
+### Gemini API
 ```python
 models_to_try = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.5-flash-lite"]
 ```
-- `gemini-2.0-flash` tiene cuota free tier a 0 (error 429)
-- `gemini-2.0-flash-lite` es el que funciona actualmente como fallback
+Fallback automático si un modelo tiene cuota agotada.
+
+### Badges Anthropic (manual)
+Procedimiento documentado en `scripts/MANUAL_BADGES.md`.
+Mantener solo 6 badges. Imágenes locales optimizadas en `static/images/`.
 
 ## Comandos útiles
 ```bash
 hugo server                          # desarrollo local (puerto 1313)
 hugo --cleanDestinationDir           # build producción
+firebase deploy --only hosting       # deploy a Firebase
 python scripts/sync_badges.py        # sync manual (requiere GOOGLE_API_KEY)
-git -c commit.gpgsign=false commit   # commit sin GPG (no hay TTY interactiva)
+git -c commit.gpgsign=false commit   # commit sin GPG
+
+# ExampleSite del tema
+hugo server --source themes/colomr-v1/exampleSite --themesDir ../..
 ```
 
 ## Preferencias de workflow con Claude
 - Puede hacer commit y push directamente, pero avisar antes con una frase breve
-- No reinventar la rueda: si algo funciona en el tema anterior, copiarlo directamente
-- Imágenes: el usuario las elige en Unsplash y pasa la URL — Claude no las busca solo
+- Imágenes: el usuario las elige y pasa la URL — Claude no las busca solo
+- Paso a paso con aprobación del usuario para cambios estructurales
+
+## Tareas pendientes
+1. ⏳ Optimizar imágenes de cover a local (WebP 1920x1080, `static/images/covers/`)
+2. ⏳ Imágenes definitivas con "alma" para las páginas
+3. ⏳ PR #693 Hugo Themes — esperando revisión, configurar PAT y flujo sync cuando aprueben
