@@ -14,7 +14,7 @@ cover_ratio: "16 / 9"
 cover_opacity: "0.50"
 icon: "👨‍💻"
 pageTitle: "Francisco Colomer"
-subtitle: "GCP Presales Manager | Google Cloud Expert"
+subtitle: "Google Cloud Presales Engineer"
 
 tags_list:
   - label: "Google Cloud"
