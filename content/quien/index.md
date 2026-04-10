@@ -1,6 +1,6 @@
 ---
 title: "Sobre mí"
-description: "Francisco Colomer — Presales Engineer especializado en Google Cloud"
+description: "Francisco Colomer — Frontier AI Practitioner"
 url: "/sobre-mi/"
 layout: "blocks"
 
@@ -14,18 +14,25 @@ cover_ratio: "16 / 9"
 cover_opacity: "0.50"
 icon: "👨‍💻"
 pageTitle: "Francisco Colomer"
-subtitle: "Google Cloud Presales Engineer"
+subtitle: "Frontier AI Practitioner"
 
 tags_list:
   - label: "Google Cloud"
-  - label: "Presales Engineer"
+  - label: "Frontier AI Practitioner"
   - label: "Vibe Coder"
 
 # Content blocks (Notion-style)
 blocks:
   - type: "text"
     heading: "Sobre mí"
-    body: "Llevo más de 20 años ayudando a empresas a tomar decisiones tecnológicas. Empecé cuando Linux era solo una palabra rara y he acompañado a decenas de organizaciones en su viaje a la nube. Hoy combino todo ese bagaje con la Inteligencia Artificial, no como tendencia, sino como herramienta real de trabajo."
+    body: |
+      Cuando llegó la ola de la IA, no esperé: Llevo más de 100 cursos, 130 labs, 550 lecciones en Google Cloud Skills Boost, entre 2023 y 2026, por iniciativa propia. Google me reconoció como Presales Engineer referente dentro de su ecosistema de Partners.
+
+      Antes de eso, 20 años decidiendo cuándo una tecnología sirve y cuándo no. IBM Greenock, Sun Microsystems Edinburgh, RIM London. Co-fundé una empresa como arquitecto técnico con equity. Fundé otra al 100% y la operé nueve años con equipo propio, hasta que una empresa mayor vio lo que estábamos construyendo y propuso integrarnos.
+
+      No negocié precio, negocié que mi equipo tuviera un nuevo hogar. Me quedé dos años dentro, viendo cómo se integra una adquisición. Ahora sé leer cuándo una tecnología empuja al negocio y cuándo el negocio va arrastrando a la tecnología.
+
+      Busco mi próximo reto como Forward-Deployed / Customer / Solutions Engineer en una compañía que cree su propio producto de IA. Prefiero la operativa de campo a la teoría de despacho.
 
   - type: "cards"
     heading: "En qué destaco"
@@ -43,12 +50,12 @@ blocks:
   - type: "timeline"
     heading: "Trayectoria"
     items:
-      - role: "Responsable de Preventa Google Cloud"
-        company: "Altostratus | Part of Telefónica Tech"
-        period: "Marzo 2025 – presente"
-      - role: "Ingeniero de Preventa Google Cloud"
-        company: "Altostratus | Part of Telefónica Tech"
-        period: "Febrero 2022 – Marzo 2025"
+      - role: "Google Cloud Presales Engineer"
+        company: "Altostratus Cloud Consulting"
+        period: "Febrero 2022 – actualidad"
+      - role: "Coordinador de Preventa GCP"
+        company: "Altostratus Cloud Consulting"
+        period: "Marzo 2025 – Abril 2026"
       - role: "Director de Proyectos TI e Innovación"
         company: "Punt Sistemes"
         period: "Marzo 2020 – Febrero 2022"
