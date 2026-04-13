@@ -1,5 +1,12 @@
 [
   {
+    "titulo": "Build Agents with Agent Development Kit (ADK)",
+    "img": "https://cdn.qwiklabs.com/WcxbS5GLopt%2F0kDlgb7FWMWOdxrYl6Ozw8q4c4JCfLU%3D",
+    "fecha": "2026-04-13",
+    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/23586889",
+    "desc": "Aprende a diseñar, desarrollar e implementar agentes conversacionales personalizados utilizando el kit de desarrollo de agentes (ADK) de Google Cloud para potenciar la interacción y automatización."
+  },
+  {
     "titulo": "Develop AI-Powered Prototypes in Google AI Studio",
     "img": "https://cdn.qwiklabs.com/e0vrsrLtbulKwrXJQFs%2FedMNW74Y2W9Mc7x41lZ0RPw%3D",
     "fecha": "2026-04-03",
@@ -33,12 +40,5 @@
     "fecha": "2026-03-24",
     "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/23226874",
     "desc": "Crea presentaciones de forma rápida con Gemini en Google Slides. Descubre cómo la IA puede ayudarte a generar contenido y estructuras para tus diapositivas de manera eficiente."
-  },
-  {
-    "titulo": "AI Boost Bites: Talk to Your Data in Sheets",
-    "img": "https://cdn.qwiklabs.com/thacVpFGDeNKIRjhsQZLkALF2BKGRoIH%2F8jjEUoETq8%3D",
-    "fecha": "2026-03-24",
-    "url": "https://www.skills.google/public_profiles/36fdb0e1-891c-4dc5-aef1-d89aecc3dd45/badges/23226806",
-    "desc": "Interactúa y obtén información valiosa de tus datos en Google Sheets mediante IA. Este badge se enfoca en cómo hacer preguntas y recibir respuestas de tus datos directamente en la interfaz de Sheets."
   }
 ]
