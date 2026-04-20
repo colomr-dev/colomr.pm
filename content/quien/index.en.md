@@ -29,7 +29,7 @@ blocks:
 
       I stayed on for two years, observing how an acquisition is integrated. Now I know when a technology is driving the business and when the business is driving the technology.
 
-      I'm looking for my next challenge as a Full-Time Executive or Presales/Customer/Solutions Engineer at a company that develops its own AI product.
+      I'm looking for my next challenge as an FDE or Presales/Customer/Solutions Engineer at a company that develops its own AI product.
 
   - type: "cards"
     heading: "What I'm good at"
