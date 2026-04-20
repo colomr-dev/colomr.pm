@@ -27,7 +27,7 @@ blocks:
 
       Before that, I worked at IBM Greenock, Sun Microsystems Edinburgh and RIM London. I co-founded a company as a technical architect with equity. I founded another company wholly-owned and operated it for nine years with my own team, until a larger company saw what we were building and proposed a merger.
 
-      I stayed on for two years, observing how an acquisition is integrated. Now I know when a technology is driving the business and when the business is driving the technology.
+      I stayed on for two years, observing how an acquisition is integrated. Now I know when the  technology is driving the business and when the business is driving the technology.
 
       I'm looking for my next challenge as an FDE or Presales/Customer/Solutions Engineer at a company that develops its own AI product.
 

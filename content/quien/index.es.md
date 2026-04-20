@@ -30,7 +30,7 @@ blocks:
 
       Antes de eso, trabajé en IBM Greenock, Sun Microsystems Edinburgh y RIM London. Co-fundé una empresa como arquitecto técnico con equity. Fundé otra al 100% y la operé nueve años con equipo propio, hasta que una empresa mayor vio lo que estábamos construyendo y propuso integrarnos.
 
-      Me quedé dos años dentro, viendo cómo se integra una adquisición. Ahora sé leer cuándo una tecnología empuja al negocio y cuándo el negocio va arrastrando a la tecnología.
+      Me quedé dos años dentro, viendo cómo se integra una adquisición. Ahora sé leer cuándo la  tecnología empuja al negocio y cuándo el negocio va arrastrando a la tecnología.
 
       Busco mi próximo reto como FDE o Presales/Customer/Solutions Engineer en una compañía que cree su propio producto de IA.
 
