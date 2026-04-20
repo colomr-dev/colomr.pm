@@ -25,7 +25,7 @@ blocks:
     body: |
       When the AI ​​wave arrived, I didn't wait: I've delivered over 100 courses, 130 labs, and 550 lessons on Google Cloud Skills Boost between 2023 and 2026, all on my own initiative. Google recognized me as a leading Presales Engineer within its Partner ecosystem.
 
-      Before that, I worked at IBM Greenock, Sun Microsystems Edinburgh, and RIM London. I co-founded a company as a technical architect with equity. I founded another company wholly-owned and operated it for nine years with my own team, until a larger company saw what we were building and proposed a merger.
+      Before that, I worked at IBM Greenock, Sun Microsystems Edinburgh and RIM London. I co-founded a company as a technical architect with equity. I founded another company wholly-owned and operated it for nine years with my own team, until a larger company saw what we were building and proposed a merger.
 
       I stayed on for two years, observing how an acquisition is integrated. Now I know when a technology is driving the business and when the business is driving the technology.
 
